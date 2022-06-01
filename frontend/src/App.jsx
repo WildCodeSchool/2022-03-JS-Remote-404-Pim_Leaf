@@ -7,6 +7,8 @@ import Suppliers from "@pages/Suppliers";
 import Clients from "@pages/Clients";
 import Company from "@pages/Company";
 import Profil from "@pages/Profil";
+import SuppliersDetails from "@pages/SuppliersDetails";
+
 import UserExport from "./contexts/UserContext";
 
 import "./App.css";
@@ -20,6 +22,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/products" element={<Products />} />
             <Route path="/suppliers" element={<Suppliers />} />
+            <Route path="/suppliers/:id" element={<SuppliersDetails />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/company" element={<Company />} />
             <Route path="/profil" element={<Profil />} />
