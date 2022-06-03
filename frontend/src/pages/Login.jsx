@@ -5,7 +5,7 @@ import Logo from "@assets/feuille.png";
 
 export default function Login() {
   return (
-    <main className="h-screen flex items-center justify-center">
+    <main className="bg-bgLogin h-screen flex items-center justify-center">
       <div className="bg-loginGradient bg-center bg-fixed bg-no-repeat h-fit pt-5 pb-14 w-96 rounded-sm flex items-center justify-center">
         <div className="flex flex-col items-center">
           <img src={Logo} alt="logo" className="w-28" />
