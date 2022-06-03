@@ -22,7 +22,7 @@ function App() {
   return (
     <UserExport.ContextProvider>
       <BrowserRouter>
-        <div className="h-screen bg-center bg-cover">
+        <div className="bg-heroBg h-screen bg-center bg-cover">
           {window.location.pathname === "/" ||
           window.location.pathname === "" ? null : (
             <Nav />
