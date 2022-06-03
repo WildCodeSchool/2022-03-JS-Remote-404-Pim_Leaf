@@ -16,7 +16,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        loginGradient: "url('./assets/background_login.png')",
+        loginGradient: "url('./assets/background_login_form.png')",
+        bgLogin: "url('./assets/background_login_page.webp')",
       },
     },
   },
