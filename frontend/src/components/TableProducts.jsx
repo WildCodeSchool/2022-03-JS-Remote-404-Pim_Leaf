@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import SwitchButtonProducts from "./SwitchButtonProducts";
 
 function TableProducts({ product }) {
@@ -16,11 +17,13 @@ function TableProducts({ product }) {
           onChange={handleChange}
         />
       </td>
-      <td className="text-left text-l">{product.product}</td>
+      <td className="text-left text-l">
+        <Link to={`/products/${product.id}`}>{product.name}</Link>
+      </td>
       <td className="text-left text-l">{product.fabricant}</td>
       <td className="text-left text-l">{product.category}</td>
       <td className="items-center">
-        {product.disponiblity}
+        {product.disponibility}
         <SwitchButtonProducts />
       </td>
     </tr>
