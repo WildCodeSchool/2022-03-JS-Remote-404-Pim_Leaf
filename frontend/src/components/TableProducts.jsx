@@ -7,7 +7,7 @@ function TableProducts({ product }) {
     setChecked(!checked);
   };
   return (
-    <tr className="odd:bg-lightBlue even:bg-white">
+    <tr className="odd:bg-lightBlue/10 even:bg-middleBlue/30">
       <td className="text-left">
         <input
           className="w-5 h-10 ml-5 accent-lightGreen"

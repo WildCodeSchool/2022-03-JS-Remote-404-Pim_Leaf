@@ -8,19 +8,22 @@ function ListProducts({ products }) {
         <table className=" min-w-full mt-40">
           <thead>
             <tr className="text-left h-12">
-              <th scope="col" className="bg-middleBlue text-middleBlue text-xl">
+              <th
+                scope="col"
+                className="bg-middleBlue/70 text-middleBlue/0 text-l uppercase"
+              >
                 a
               </th>
-              <th scope="col" className="bg-middleBlue text-xl ">
+              <th scope="col" className="bg-middleBlue/70 text-l uppercase">
                 Produit
               </th>
-              <th scope="col" className="bg-middleBlue text-xl">
+              <th scope="col" className="bg-middleBlue/70 text-l uppercase">
                 Fabricant
               </th>
-              <th scope="col" className="bg-middleBlue text-xl">
+              <th scope="col" className="bg-middleBlue/70 text-l uppercase">
                 Catégorie
               </th>
-              <th scope="col" className="bg-middleBlue text-xl">
+              <th scope="col" className="bg-middleBlue/70 text-l uppercase">
                 Disponibilité
               </th>
             </tr>

@@ -12,7 +12,8 @@ module.exports = {
       white: "#FFFFFF",
     },
     fontFamily: {
-      sans: ["sans-serif"],
+      barlow: ["Barlow", "sans-serif"],
+      redHat: ["Red Hat Display", "sans-serif"],
     },
     extend: {
       backgroundImage: {
