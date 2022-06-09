@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
-
-import dataSuppliers from "../data/MaxData";
+import React from "react";
+import SearchBarSuppliers from "../components/SearchBarSuppliers";
+import ToBeConfirmed from "../components/ToBeConfirmed";
+import SuppliersTable from "../components/SuppliersTable";
+import suppliersData from "../data/MarieData";
+import suppliersData2 from "../data/MarieData2";
 
 function Suppliers() {
   return (
     <main>
-      <h1>Suppliers</h1>
-      {dataSuppliers.map((supplier) => (
-        <Link to={`/suppliers/${supplier.id}`} key={supplier.id}>
-          {supplier.name}
-        </Link>
-      ))}
+      <SearchBarSuppliers />
+      <ToBeConfirmed confirmed={suppliersData2} />
+      <SuppliersTable suppliers={suppliersData} />
     </main>
   );
 }

@@ -5,9 +5,9 @@ function SwitchButtonProducts() {
   const enabledClass = " transform translate-x-5";
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="flex h-10 items-center ">
       <div
-        className="w-12 h-7 flex items-center rounded-full p-1 cursor-pointer ml-10"
+        className="w-12 h-7 flex rounded-full p-1 cursor-pointer ml-10"
         // adding color when disabled
         onClick={() => {
           setEnabled(!enabled);

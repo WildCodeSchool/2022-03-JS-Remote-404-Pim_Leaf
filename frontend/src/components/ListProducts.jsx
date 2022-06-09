@@ -1,11 +1,19 @@
 import React from "react";
+import DownloadButton from "./DownloadButton";
+import MinusButton from "./MinusButton";
+import PlusButton from "./PlusButton";
 import TableProducts from "./TableProducts";
 
 function ListProducts({ products }) {
   return (
     <div className="flex flex-col">
-      <div className="min-w-full sm:px-6 lg:px-8">
-        <table className=" min-w-full mt-40">
+      <div className="flex flex-row justify-end mt-11">
+        <PlusButton />
+        <MinusButton />
+        <DownloadButton />
+      </div>
+      <div className="min-w-full sm:px-6 lg:px-20 font-redHat">
+        <table className=" min-w-full">
           <thead>
             <tr className="text-left h-12">
               <th

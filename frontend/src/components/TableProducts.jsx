@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import SwitchButtonProducts from "./SwitchButtonProducts";
 
 function TableProducts({ product }) {
@@ -22,7 +22,7 @@ function TableProducts({ product }) {
       </td>
       <td className="text-left text-l">{product.fabricant}</td>
       <td className="text-left text-l">{product.category}</td>
-      <td className="items-center">
+      <td className="flex items-center">
         {product.disponibility}
         <SwitchButtonProducts />
       </td>
