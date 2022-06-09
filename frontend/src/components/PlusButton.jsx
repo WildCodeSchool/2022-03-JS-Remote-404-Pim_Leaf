@@ -7,7 +7,7 @@ function PlusButton() {
         <img
           src={IconPlus}
           alt="icon-edit"
-          className="w-16 transition duration-120 ease-out hover:scale-110 mr-16"
+          className="w-16 transition duration-120 ease-out hover:scale-110 mr-2"
         />
       </button>
     </div>

@@ -24,7 +24,7 @@ function SearchBarProducts() {
           <img
             src="../src/assets/search_icon.svg"
             alt="icon recherche"
-            className="h-10 w-5"
+            className="h-10 w-4"
           />
         </button>
       </div>
