@@ -6,9 +6,45 @@ function SuppliersDetails() {
 
   return (
     <main>
-      <h1>Details Fournisseur</h1>
-      <h2>{dataSuppliers[parseInt(id, 10)].name}</h2>
-      <p>{dataSuppliers[parseInt(id, 10)].speciality}</p>
+      <p className="text-5xl flex justify-center m-3 pt-16">
+        {dataSuppliers[parseInt(id, 10)].name}
+      </p>
+      <div className="bg-lightBlue relative m-10 mt-16">
+        <article className="relative mt-10 grid grid-cols-3 gap-1 ">
+          <h1 className="absolute -top-10 text-4xl">Description</h1>
+          <div className="col-span-2 order-1 p-10">
+            <p className="text-3xl mb-4 flex grid-span-2 relative">
+              {dataSuppliers[parseInt(id, 10)].speciality}
+            </p>
+            <p className="text-2xl">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+              reiciendis rem esse laboriosam excepturi alias consectetur, hic
+              fuga quos ipsum doloremque non itaque minus tempore similique nemo
+              ipsa. Fugit, et? Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Tempore voluptatibus blanditiis modi omnis
+              cumque quaerat nobis atque? Porro, quia molestiae vel
+              reprehenderit possimus minima laudantium. Qui nisi dicta
+              repudiandae molestiae?
+            </p>
+          </div>
+          <div className="col-span-2 order-1 p-10">
+            <h3 className="text-3xl mb-4 flex grid-span-2 relative">
+              Certification
+            </h3>
+          </div>
+        </article>
+      </div>
+      <div className="bg-lightBlue relative m-10 mt-16">
+        <div className="col-span-2 order-1 ">
+          <h3 className=" absolute -top-10 text-4xl">Coordonees</h3>
+          <a
+            href="https://www.openstreetmap.org/search?query=mulhouse#map=13/47.7443/7.3457"
+            className="text-3xl flex grid-span-2 relative p-10"
+          >
+            {dataSuppliers[parseInt(id, 10)].coordonees}
+          </a>
+        </div>
+      </div>
     </main>
   );
 }

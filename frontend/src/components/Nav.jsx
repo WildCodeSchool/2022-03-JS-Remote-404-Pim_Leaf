@@ -19,7 +19,7 @@ function Nav() {
             : "./src/assets/burger_icon.png"
         }
         alt=""
-        className="h-5 z-20 fixed right-9 top-10 cursor-pointer lg:hidden"
+        className="h-5 z-20 absolute right-9 top-10 cursor-pointer lg:hidden"
         onClick={() => setNavOpen(!navOpen)}
       />
       <ul
