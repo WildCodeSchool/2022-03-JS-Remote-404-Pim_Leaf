@@ -1,24 +1,32 @@
-# 5DEV CONVENTION
+# PROJECT ACHIEVEMENT :octocat:
 
-##
+[x] Sprint 1 :heavy_check_mark:
+[] Sprint 2
+[] Sprint 3
+[] Sprint 4
+[] Sprint 5
 
-CSS
+![Logo Pimleaf](https://www.pimleaf.fr/survey/tmp/assets/181c5803/Logo%20Pimleaf-1-.png)
+
+# RESOURCES LINKS :rocket:
+
+-   Google Drive for Assets [LINK](https://drive.google.com/drive/folders/1hMR7FfGbupMqo02WwPGFPcJILT5Amzjn).
+
+# 5DEV CONVENTION :chart_with_upwards_trend:
+
+## CSS :balloon:
 
 class => each term separated by an hyphen (eg "class-test")
 id => each term separated by an underscore (eg "id_test")
 
-##
-
-JS
-
-data files => "firstname"Data.jsx (eg "ClementData.jsx")
+## JS :shipit:
 
 minimal page code :
 
 ```
-const "PageName" = () => {
+function "PageName"() {
   return (
-    <main>
+    <main id="PageName">
       <h1>"PageName"</h1>
     </main>
   );
@@ -30,7 +38,7 @@ export default "PageName";
 minimal component code :
 
 ```
-const "ComponentName" = () => {
+function "ComponentName"() {
   return (
     <>
       <h1>"ComponentName"</h1>
@@ -41,39 +49,6 @@ const "ComponentName" = () => {
 export default "ComponentName";
 ```
 
-# WILD CONVENTION
+## DataBase Columns
 
-## Concept
-
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
-
-## Setup & Use
-
-### Project Initialization
-
--   In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
--   Clone this repo, enter it
--   Run command `npm run setup`
--   _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
-
-### Available Commands
-
--   `setup` : Initialization of frontend and backend, as well as all toolings
--   `dev` : Starts both servers (frontend + backend) in one terminal
--   `dev-front` : Starts the React frontend server
--   `dev-back` : Starts the Express backend server
--   `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
--   `fix` : Fixes linter errors (run it if `lint` growls on your code !)
-
-## FAQ
-
-### Tools
-
--   _Concurrently_ : Allows for several commands to run concurrently in the same CLI
--   _Husky_ : Allows to execute specific commands that trigger on _git_ events
--   _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
--   _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
--   _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
--   _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
--   _Nodemon_ : Allows to restart the server everytime a .js file is udated
+lowercase, singular, underscore separation
