@@ -7,21 +7,32 @@
 5. [ ] Sprint 5
 
 ![Logo Pimleaf](https://www.pimleaf.fr/survey/tmp/assets/181c5803/Logo%20Pimleaf-1-.png)
+\
 
 # RESOURCES LINKS :rocket:
 
 -   Google Drive for Assets [LINK](https://drive.google.com/drive/folders/1hMR7FfGbupMqo02WwPGFPcJILT5Amzjn).
 
+\
+
 # 5DEV CONVENTION :chart_with_upwards_trend:
+
+\
+
+## :framed_picture: IMAGES
+
+-   Labels images should be 96x96 pixels wide and have PNG extension
+-   Icons should have SVG extension
+
+\
 
 ## :balloon: CSS
 
 -   class => each term separated by an hyphen (eg "class-test")
 -   id => each term separated by an underscore (eg "id_test")
 
-## :framed_picture: IMAGES
 
-Labels images should be 96x96 pixels wide.
+\
 
 ## :shipit: JS
 
@@ -39,6 +50,9 @@ function "PageName"() {
 export default "PageName";
 ```
 
+\
+\
+
 minimal component code :
 
 ```
@@ -52,6 +66,8 @@ function "ComponentName"() {
 
 export default "ComponentName";
 ```
+
+\
 
 ## :floppy_disk: DataBase Columns
 

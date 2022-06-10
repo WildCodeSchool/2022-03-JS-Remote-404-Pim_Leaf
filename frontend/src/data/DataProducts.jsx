@@ -2,28 +2,73 @@ const dataProducts = [
   {
     id: 1,
     name: "Farine T65",
-    pratique: "test",
-    advise: "test",
+    pratique: "test1",
+    advise: "Ne la mangez pas crue",
     fabricant: "Moulin d'ici",
     category: "Farines",
     allergene: "test",
-    origin: "test",
-    label: "test",
+    origin: "france",
+    label: [
+      {
+        name: "AB",
+        src: "../src/assets/label_ab.jpg",
+        alt: "label AB",
+      },
+      {
+        name: "AlsaceExcellence",
+        src: "../src/assets/label_alsace_gold.jpg",
+        alt: "label Alsace",
+      },
+      {
+        name: "SPP",
+        src: "../src/assets/label_spp.png",
+        alt: "label SPP",
+      },
+      {
+        name: "EURO",
+        src: "../src/assets/label_euro.jpg",
+        alt: "label Euro",
+      },
+    ],
     disponibility: true,
-    ingredients: ["test", "test", "test"],
+    ingredients: ["farine de blé"],
+    recipeIdea: "Galettes, crêpes, gâteaux, que des bonnes choses",
   },
   {
     id: 2,
     name: "Pâtes torsades",
-    pratique: "test",
-    advise: "test",
+    pratique: "test2",
+    advise: "Meilleur avec de la bolognaise",
     fabricant: "PastaBio",
     category: "Pâtes et riz",
     allergene: "test",
-    origin: "test",
-    label: "test",
+    origin: "italie",
+    label: [
+      {
+        name: "AB",
+        src: "../src/assets/label_ab.jpg",
+        alt: "label AB",
+      },
+      {
+        name: "AlsaceExcellence",
+        src: "../src/assets/label_alsace_gold.jpg",
+        alt: "label Alsace",
+      },
+      {
+        name: "SPP",
+        src: "../src/assets/label_spp.png",
+        alt: "label SPP",
+      },
+      {
+        name: "EURO",
+        src: "../src/assets/label_euro.jpg",
+        alt: "label Euro",
+      },
+    ],
     disponibility: true,
-    ingredients: ["test", "test", "test"],
+    ingredients: ["farine de blé", "oeufs", "eau"],
+    recipeIdea:
+      "Pâtes carbonara, Grâtin de pâtes, les féculents à portée de fourchette",
   },
   {
     id: 3,
@@ -34,9 +79,32 @@ const dataProducts = [
     category: "Huiles",
     allergene: "test",
     origin: "test",
-    label: "test",
+    label: [
+      {
+        name: "AB",
+        src: "../src/assets/label_ab.jpg",
+        alt: "label AB",
+      },
+      {
+        name: "AlsaceExcellence",
+        src: "../src/assets/label_alsace_gold.jpg",
+        alt: "label Alsace",
+      },
+      {
+        name: "SPP",
+        src: "../src/assets/label_spp.png",
+        alt: "label SPP",
+      },
+      {
+        name: "EURO",
+        src: "../src/assets/label_euro.jpg",
+        alt: "label Euro",
+      },
+    ],
     disponibility: true,
-    ingredients: ["test", "test", "test"],
+    ingredients: ["olive"],
+    recipeIdea:
+      "Vinaigrette, Avocats à l'huile, tout ce qu'il vous faut pour les artères",
   },
   {
     id: 4,
