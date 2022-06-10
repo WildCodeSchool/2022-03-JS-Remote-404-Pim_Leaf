@@ -7,11 +7,13 @@ function Nav() {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <nav className="flex items-center justify-between">
-      <img
-        src="./src/assets/logo1.png"
-        alt="logo"
-        className="h-24 ml-7 mb-5 item-centers"
-      />
+      <Link to="/products" className="ml-10 w-40">
+        <img
+          src="./src/assets/logo1.png"
+          alt="logo"
+          className="w-full h-auto item-centers"
+        />
+      </Link>
       <img
         src={
           navOpen

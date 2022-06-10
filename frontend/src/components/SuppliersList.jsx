@@ -6,7 +6,11 @@ export default function SuppliersList({ id, name, domaine, ville, status }) {
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <div className="flex">
           <div className="flex-shrink-0 w-10 h-10">
-            <img className="w-full h-full rounded-full" src="" alt="" />
+            <img
+              className="w-full h-full rounded-full"
+              src="./src/assets/feuille.png"
+              alt="avatar"
+            />
           </div>
           <div className="ml-3">
             <p className="text-darkBlue whitespace-no-wrap">{name}</p>

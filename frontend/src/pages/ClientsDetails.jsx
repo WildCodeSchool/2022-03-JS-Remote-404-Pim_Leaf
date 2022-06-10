@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import dataSet from "../data/BenoitData";
+import dataSet from "../data/DataProducts";
 
 function ClientsDetails() {
   const { id } = useParams();

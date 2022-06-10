@@ -1,4 +1,4 @@
-function ProductsDetailsRetailer() {
+function ProductsDetailsRetailer({ advise, recipeIdea }) {
   return (
     <>
       {/* COMPANY */}
@@ -9,26 +9,12 @@ function ProductsDetailsRetailer() {
 
         <div className="p-10">
           <h3 className="text-2xl pb-2">Astuces</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            molestias quia maiores commodi ipsum quos, et ad mollitia, impedit
-            atque saepe maxime ullam, blanditiis velit delectus magnam? Vel
-            repudiandae assumenda neque, quisquam, libero voluptatem animi
-            beatae facere quam eos cum in? Dolorem officiis hic illo quam
-            tempore odio voluptatem similique.
-          </p>
+          <p>{advise}</p>
         </div>
 
         <div className="p-10">
           <h3 className="text-2xl pb-2">Idées recettes</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            molestias quia maiores commodi ipsum quos, et ad mollitia, impedit
-            atque saepe maxime ullam, blanditiis velit delectus magnam? Vel
-            repudiandae assumenda neque, quisquam, libero voluptatem animi
-            beatae facere quam eos cum in? Dolorem officiis hic illo quam
-            tempore odio voluptatem similique.
-          </p>
+          <p>{recipeIdea}</p>
         </div>
       </article>
     </>
