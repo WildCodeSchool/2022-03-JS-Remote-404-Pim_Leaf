@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import { useParams } from "react-router-dom";
 
+import ProductsDetailsButtons from "@components/ProductsDetailsButtons";
 import ProductsDetailsProduct from "@components/ProductsDetailsProduct";
 import ProductsDetailsRetailer from "@components/ProductsDetailsRetailer";
 import ProductsDetailsSupplier from "@components/ProductsDetailsSupplier";
@@ -18,40 +20,22 @@ function ProductsDetails() {
 
       <section className="grid grid-cols-4">
         <div className="col-span-3 grid grid-rows-3 gap-1">
-          <ProductsDetailsProduct ingredients={DT.ingredients} />
+          <ProductsDetailsProduct
+            ingredients={DT.ingredients}
+            origin={DT.origin}
+            advise={DT.advise}
+            label={DT.label}
+          />
 
           <ProductsDetailsSupplier />
 
-          <ProductsDetailsRetailer />
+          <ProductsDetailsRetailer
+            advise={DT.advise}
+            recipeIdea={DT.recipeIdea}
+          />
         </div>
 
-        <aside className="col-span-1 border-2 m-8 mt-16 p-2 h-28 grid grid-cols-4 bg-white">
-          <img src="../src/assets/icon_pencil.svg" alt="" className="w-6" />
-
-          <a href="#Company" className="col-span-3">
-            Éditer
-          </a>
-
-          <img
-            src="../src/assets/icon_download_cloud.svg"
-            alt=""
-            className="w-6"
-          />
-
-          <a href="#Company" className="col-span-3">
-            Télécharger
-          </a>
-
-          <img
-            src="../src/assets/icon_arrows_rotate.svg"
-            alt=""
-            className="w-6"
-          />
-
-          <a href="#Company" className="col-span-3">
-            Actualiser
-          </a>
-        </aside>
+        <ProductsDetailsButtons />
       </section>
     </main>
   );
