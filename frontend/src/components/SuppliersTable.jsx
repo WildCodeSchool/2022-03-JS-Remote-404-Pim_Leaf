@@ -14,19 +14,19 @@ function SuppliersTable({ suppliers }) {
             <table className="min-w-full leading-normal">
               <thead>
                 <tr>
-                  <th className="px-5 py-3 border-b-2 border-lightGrey/100 bg-lightGrey/60 text-left text-xs font-semibold text-darkBlue/60 uppercase tracking-wider">
+                  <th className="px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
                     Fournisseur / Nom
                   </th>
-                  <th className="px-5 py-3 border-b-2 border-lightGrey/100 bg-lightGrey/60 text-left text-xs font-semibold text-darkBlue/60 uppercase tracking-wider">
+                  <th className="px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
                     Domaine
                   </th>
-                  <th className="px-5 py-3 border-b-2 border-lightGrey/100 bg-lightGrey/60 text-left text-xs font-semibold text-darkBlue/60 uppercase tracking-wider">
+                  <th className="px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
                     Ville
                   </th>
-                  <th className="px-5 py-3 border-b-2 border-lightGrey/100 bg-lightGrey/60 text-left text-xs font-semibold text-darkBlue/60 uppercase tracking-wider">
-                    Status
+                  <th className="px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
+                    Statut
                   </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 border-lightGrey/100 bg-lightGrey/60" />
+                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 border-middleBlue/100 bg-middleBlue/60" />
                 </tr>
               </thead>
               <tbody>
