@@ -9,20 +9,22 @@ function FieldsProfil() {
   }
 
   return (
-    <div className="ml-20 mr-20">
+    <div className="m-auto w-4/5 font-redHat">
+      <p className="mt-5 mb-8 text-xl">
+        Nom de mon entreprise : {userProfil[0].company}
+      </p>
       {userProfil.map((user) => (
-        <div key={user.id}>
+        <div key={user.id} className=" text-xl">
           Mon nom :
-          <p className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 mt-1 mb-3">
+          <p className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 mt-1 mb-3 text-base">
             {user.name}
           </p>
-          <p className="mt-5 mb-16">Nom de mon entreprise : {user.company}</p>
           Adresse email :
-          <p className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 mt-1 mb-3">
+          <p className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 mt-1 mb-3 text-base">
             {user.mail}
           </p>
           Ancien mot de passe :
-          <p className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 mt-1 mb-3">
+          <p className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 mt-1 mb-3 text-base">
             {hidePassword}
           </p>
         </div>

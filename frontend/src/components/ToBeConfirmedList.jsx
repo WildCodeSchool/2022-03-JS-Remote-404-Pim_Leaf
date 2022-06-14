@@ -2,7 +2,7 @@ import React from "react";
 
 function ToBeConfirmedList({ id, name, domaine, ville, status }) {
   return (
-    <tr>
+    <tr className="font-redHat">
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <div className="flex">
           <div className="flex-shrink-0 w-10 h-10">
