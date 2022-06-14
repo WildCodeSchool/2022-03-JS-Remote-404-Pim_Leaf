@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Avatar from "@assets/avatar_login.png";
 import Padlock from "@assets/padlock_login.png";
@@ -9,6 +10,12 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   console.warn(email);
   console.warn(password);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/products");
+  };
   return (
     <div>
       <form className="flex flex-col items-center">
@@ -50,6 +57,7 @@ function LoginForm() {
           type="submit"
           value="login"
           className="py-2 w-28 text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-12"
+          onClick={handleClick}
         />
       </form>
     </div>
