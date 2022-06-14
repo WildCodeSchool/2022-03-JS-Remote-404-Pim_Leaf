@@ -12,9 +12,9 @@ function ListProducts({ products }) {
         <MinusButton />
         <DownloadButton />
       </div>
-      <div className="min-w-full sm:px-6 lg:px-20 font-redHat">
-        <table className=" min-w-full">
-          <thead>
+      <div className="font-redHat w-4/5 m-auto">
+        <table className="w-full">
+          <thead className="">
             <tr className="text-left h-12">
               <th
                 scope="col"

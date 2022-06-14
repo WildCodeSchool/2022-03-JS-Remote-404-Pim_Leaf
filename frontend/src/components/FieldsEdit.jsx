@@ -6,11 +6,11 @@ function FieldsEdit() {
 
   return (
     <div>
-      <form className="flex flex-col items-center">
-        <label htmlFor="password" className="flex flex-col w-screen">
-          <p className="ml-20">Nouveau mot de passe :</p>
+      <form className="font-redHat flex flex-col items-start min-w-max w-4/5 m-auto">
+        <label htmlFor="email" className="text-xl w-full">
+          Nouveau mot de passe :
           <input
-            className="text-darkBlue bg-middleBlue bg-opacity-50 p-2 mb-4 ml-20 mr-20"
+            className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 w-full mt-1 mb-3"
             id="email"
             type="text"
             name="password"
@@ -20,10 +20,13 @@ function FieldsEdit() {
               setPassword(input.value);
             }}
           />
-          <p className="ml-20">Confirmer le nouveau mot de passe :</p>
+        </label>
+
+        <label htmlFor="confirmMail" className="text-xl w-full">
+          Confirmer le nouveau mot de passe :
           <input
-            className="text-darkBlue bg-middleBlue bg-opacity-50 p-2 mb-4 ml-20 mr-20"
-            id="email"
+            className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 w-full  mt-1 mb-3"
+            id="confirmMail"
             type="text"
             name="password"
             placeholder=""
@@ -33,10 +36,11 @@ function FieldsEdit() {
             }}
           />
         </label>
+
         <input
           type="submit"
           value="enregistrer"
-          className="py-2 w-28 text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full"
+          className="m-auto py-2 w-28 text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-12"
           onClick={() =>
             password === confirmPassword
               ? console.warn("your password is good")

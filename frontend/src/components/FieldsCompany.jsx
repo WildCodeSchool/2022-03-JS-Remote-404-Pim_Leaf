@@ -10,22 +10,25 @@ function FieldsCompany() {
   return (
     <div>
       <form
-        className="flex flex-col items-center min-w-max ml-20 mr-20"
+        className="font-redHat flex flex-col items-center min-w-max w-4/5 m-auto"
         onSubmit={handleSubmit(handleSubmit)}
       >
         <div className="flex flex-col items-start w-full">
-          <label className="font-barlow text-xl">Domaine</label>
+          <label className="text-xl">Domaine</label>
           <input
-            className="bg-middleBlue bg-opacity-50 text-darkBlue font-redHat p-2 w-full  mt-1 mb-3"
+            className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 w-full  mt-1 mb-3"
             name="name"
             value={CompanyProfil[0].domaine}
             {...register("name")}
           />
         </div>
         <div className="flex flex-col items-start w-full">
-          <label className="font-barlow text-xl">Description</label>
-          <input
-            className="bg-middleBlue bg-opacity-50 text-darkBlue font-redHat p-2 w-full  mt-1 mb-3"
+          <label className="text-xl">Description</label>
+          <textarea
+            cols="30"
+            rows="5"
+            className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 w-full mt-1
+            mb-3"
             type="description"
             name="description"
             value={CompanyProfil[0].description}
@@ -33,9 +36,9 @@ function FieldsCompany() {
           />
         </div>
         <div className="flex flex-col items-start w-full">
-          <label className="font-barlow text-xl">Email de contact</label>
+          <label className="text-xl">Email de contact</label>
           <input
-            className="bg-middleBlue bg-opacity-50 text-darkBlue font-redHat p-2 w-full  mt-1 mb-3"
+            className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 w-full  mt-1 mb-3"
             type="email"
             name="email"
             value={CompanyProfil[0].mail}
@@ -43,9 +46,9 @@ function FieldsCompany() {
           />
         </div>
         <div className="flex flex-col items-start w-full">
-          <label className="font-barlow text-xl">Adresse</label>
+          <label className="text-xl">Adresse</label>
           <input
-            className="bg-middleBlue bg-opacity-50 text-darkBlue font-redHat p-2 w-full  mt-1 mb-3"
+            className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 w-full  mt-1 mb-3"
             type="adress"
             name="address"
             value={CompanyProfil[0].address}
@@ -53,9 +56,9 @@ function FieldsCompany() {
           />
         </div>
         <div className="flex flex-col items-start w-full">
-          <label className="font-barlow text-xl">Téléphone</label>
+          <label className="text-xl">Téléphone</label>
           <input
-            className="bg-middleBlue bg-opacity-50 text-darkBlue font-redHat p-2 w-full  mt-1 mb-3"
+            className="bg-middleBlue bg-opacity-50 text-darkBlue p-2 w-full  mt-1 mb-3"
             type="phone"
             name="phone"
             value={CompanyProfil[0].phone}
