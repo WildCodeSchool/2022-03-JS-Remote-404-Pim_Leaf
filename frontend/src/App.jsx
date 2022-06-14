@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Login from "@pages/Login";
 import Products from "@pages/Products";
@@ -19,16 +20,18 @@ import Nav from "./components/Nav";
 import "./App.css";
 
 function App() {
+  const [isNavBarHidden, setIsNavBarHidden] = useState(false);
+
   return (
     <UserExport.ContextProvider>
       <BrowserRouter>
         <div className="h-screen bg-center bg-cover">
-          {window.location.pathname === "/" ||
-          window.location.pathname === "" ? null : (
-            <Nav />
-          )}
+          {!isNavBarHidden && <Nav />}
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route
+              path="/"
+              element={<Login setIsNavbarHidden={setIsNavBarHidden} />}
+            />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductsDetails />} />
             <Route path="/suppliers" element={<Suppliers />} />
