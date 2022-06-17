@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { useState, useEffect } from "react";
 import axios from "axios";
 import DownloadButton from "./DownloadButton";
@@ -9,7 +10,7 @@ function ListProducts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products")
+      .get(`${import.meta.env.VITE_BACKEND_URL}/products`)
       .then((res) => {
         setProducts(res.data);
       })
@@ -51,8 +52,8 @@ function ListProducts() {
           </thead>
           <tbody className="">
             {/* //   map the dataProducts for each product */}
-            {products.map((product) => (
-              <TableProducts key={product.id} product={product} />
+            {products.map((product, index) => (
+              <TableProducts key={index} product={product} />
             ))}
           </tbody>
         </table>
