@@ -4,8 +4,17 @@ class ProductsManager extends AbstractManager {
   static table = "products";
 
   findAll(query) {
-    let sqlQuery = `SELECT * FROM ${ProductsManager.table}
-     INNER JOIN category AS c ON c.id=${ProductsManager.table}.category_id `;
+    let sqlQuery = `
+    SELECT p.id, c.company_name, p.product_name, cat.name, s.quantity
+    FROM ${ProductsManager.table} AS p
+    LEFT JOIN stock AS s
+    ON s.product_id = p.id
+    LEFT JOIN company AS c
+    ON s.company_id = c.id
+    LEFT JOIN category AS cat
+    ON p.category_id = cat.id
+    `;
+
     const sqlValue = [];
     if (query.name) {
       sqlQuery += "WHERE product_name LIKE ?";
