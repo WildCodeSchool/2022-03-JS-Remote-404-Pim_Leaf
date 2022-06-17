@@ -1,4 +1,7 @@
 import { useParams } from "react-router-dom";
+
+import SearchBarSuppliersDetails from "../components/SearchBarSupppliersDetails";
+import ButtonSuppliersDetails from "../components/ButtonSuppliersDetails";
 import dataSuppliers from "../data/MaxData";
 
 function SuppliersDetails() {
@@ -6,11 +9,11 @@ function SuppliersDetails() {
 
   return (
     <main>
-      <p className="text-5xl flex justify-center m-3 pt-16">
+      <p className="text-5xl flex justify-center pt-10">
         {dataSuppliers[parseInt(id, 10)].name}
       </p>
-      <div className="bg-lightBlue relative m-10 mt-16">
-        <article className="relative mt-10 grid grid-cols-3 gap-1 ">
+      <div className="bg-middleBlue/70 relative m-10 mt-16">
+        <article className="relative grid grid-cols-3 ">
           <h1 className="absolute -top-10 text-4xl">Description</h1>
           <div className="col-span-2 order-1 p-10">
             <p className="text-3xl mb-4 flex grid-span-2 relative">
@@ -28,13 +31,13 @@ function SuppliersDetails() {
             </p>
           </div>
           <div className="col-span-2 order-1 p-10">
-            <h3 className="text-3xl mb-4 flex grid-span-2 relative">
+            <h3 className="text-3xl uppercase mb-4 flex grid-span-2 relative">
               Certification
             </h3>
           </div>
         </article>
       </div>
-      <div className="bg-lightBlue relative m-10 mt-16">
+      <div className="bg-middleBlue/70 relative m-10 mt-16">
         <div className="col-span-2 order-1 ">
           <h3 className=" absolute -top-10 text-4xl">Coordonees</h3>
           <a
@@ -45,6 +48,8 @@ function SuppliersDetails() {
           </a>
         </div>
       </div>
+      <SearchBarSuppliersDetails />
+      <ButtonSuppliersDetails />
     </main>
   );
 }

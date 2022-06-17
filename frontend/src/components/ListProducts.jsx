@@ -1,10 +1,23 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import DownloadButton from "./DownloadButton";
 import MinusButton from "./MinusButton";
 import PlusButton from "./PlusButton";
 import TableProducts from "./TableProducts";
 
-function ListProducts({ products }) {
+function ListProducts() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/products")
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((error) => {
+        console.warn(error.response.data);
+      });
+  }, []);
+
   return (
     <div className="flex flex-col">
       <div className="flex flex-row justify-end">
