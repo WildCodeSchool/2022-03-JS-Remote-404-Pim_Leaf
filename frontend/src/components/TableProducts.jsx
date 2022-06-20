@@ -7,6 +7,7 @@ function TableProducts({ product }) {
   const handleChange = () => {
     setChecked(!checked);
   };
+
   return (
     <tr className="odd:bg-lightBlue/10 even:bg-middleBlue/30">
       <td className="text-left border-y-8 border-white">
@@ -24,7 +25,7 @@ function TableProducts({ product }) {
         {product.company_name}
       </td>
       <td className="text-left text-l border-y-8 border-white">
-        {product.name}
+        {product.category}
       </td>
       <td className="border-y-8 border-white">
         <td className="flex items-center ">

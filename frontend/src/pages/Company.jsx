@@ -1,4 +1,4 @@
-import FieldsCompany from "../components/FieldsCompany";
+import Fields from "../components/Fields";
 
 function Company() {
   return (
@@ -6,7 +6,7 @@ function Company() {
       <h1 className="flex justify-center text-3xl font-bold font-barlow text-darkBlue mb-14 mt-14">
         Mon entreprise
       </h1>
-      <FieldsCompany />
+      <Fields />
     </main>
   );
 }
