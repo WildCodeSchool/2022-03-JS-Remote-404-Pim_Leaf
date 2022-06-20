@@ -1,23 +1,32 @@
+import { Link } from "react-router-dom";
+import IconEdit from "../assets/icon_edit.svg";
+import IconDownload from "../assets/icon_download.svg";
+import IconRotate from "../assets/icon_arrows_rotate.svg";
+
 function ProductsDetailsButtons() {
   return (
-    <aside className="col-span-1 border-2 m-8 mt-16 p-2 h-28 grid grid-cols-4 bg-white">
-      <img src="../src/assets/icon_pencil.svg" alt="" className="w-6" />
-
-      <a href="#Company" className="col-span-3">
-        Éditer
-      </a>
-
-      <img src="../src/assets/icon_download_cloud.svg" alt="" className="w-6" />
-
-      <a href="#Company" className="col-span-3">
-        Télécharger
-      </a>
-
-      <img src="../src/assets/icon_arrows_rotate.svg" alt="" className="w-6" />
-
-      <a href="#Company" className="col-span-3">
-        Actualiser
-      </a>
+    <aside className="flex flex-row justify-end items-center lg:mr-60 md:mr-20">
+      <Link to="#Company">
+        <img
+          src={IconRotate}
+          alt="icon actualiser"
+          className="w-8 mr-4 transition duration-120 ease-out hover:scale-110"
+        />
+      </Link>
+      <Link to="#Company">
+        <img
+          src={IconDownload}
+          alt="icon télécharger"
+          className="w-16 transition duration-120 ease-out hover:scale-110"
+        />
+      </Link>
+      <Link to="#Company">
+        <img
+          src={IconEdit}
+          alt="icon modifier"
+          className="w-16 transition duration-120 ease-out hover:scale-110"
+        />
+      </Link>
     </aside>
   );
 }

@@ -1,12 +1,9 @@
 function ProductsDetailsRetailer({ advise, recipeIdea }) {
   return (
-    <>
+    <div className="flex flex-col mt-20 font-redHat w-3/4 m-auto ">
+      <h2 className="text-2xl">Mon commerce</h2>
       {/* COMPANY */}
-      <article className="border-2 relative flex justify-between m-3 mt-16 h-max bg-white">
-        <h2 className="absolute -top-7 left-10 text-2xl bg-white z-10 p-2 border rounded-sm">
-          Mon commerce
-        </h2>
-
+      <article className="bg-middleBlue/50 mb-10 flex justify-between">
         <div className="p-10">
           <h3 className="text-2xl pb-2">Astuces</h3>
           <p>{advise}</p>
@@ -17,7 +14,7 @@ function ProductsDetailsRetailer({ advise, recipeIdea }) {
           <p>{recipeIdea}</p>
         </div>
       </article>
-    </>
+    </div>
   );
 }
 

@@ -15,11 +15,13 @@ function ProductsDetails() {
   return (
     <main>
       <article className="flex justify-center pt-16">
-        <h1 className="text-3xl font-bold font-barlow">{DT.name}</h1>
+        <h1 className="flex justify-center text-3xl font-bold font-barlow">
+          {DT.name}
+        </h1>
       </article>
-
-      <section className="grid grid-cols-4">
-        <div className="col-span-3 grid grid-rows-3 gap-1">
+      <ProductsDetailsButtons />
+      <section>
+        <div>
           <ProductsDetailsProduct
             ingredients={DT.ingredients}
             origin={DT.origin}
@@ -34,8 +36,6 @@ function ProductsDetails() {
             recipeIdea={DT.recipeIdea}
           />
         </div>
-
-        <ProductsDetailsButtons />
       </section>
     </main>
   );
