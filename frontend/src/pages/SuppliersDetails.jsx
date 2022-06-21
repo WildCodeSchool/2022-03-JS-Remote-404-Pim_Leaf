@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
 
+import DetailsSuppliers from "../components/DetailsSuppliers";
 import SearchBarSuppliersDetails from "../components/SearchBarSupppliersDetails";
 import ButtonSuppliersDetails from "../components/ButtonSuppliersDetails";
 import dataSuppliers from "../data/MaxData";
+import dataProducts from "../data/DataProducts";
 
 function SuppliersDetails() {
   const { id } = useParams();
-
   return (
     <main>
       <p className="text-5xl flex justify-center pt-10">
@@ -50,6 +51,7 @@ function SuppliersDetails() {
       </div>
       <SearchBarSuppliersDetails />
       <ButtonSuppliersDetails />
+      <DetailsSuppliers products={dataProducts} />
     </main>
   );
 }
