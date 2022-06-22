@@ -22,7 +22,7 @@ function TableProducts({ product }) {
         <Link to={`/products/${product.id}`}>{product.product_name}</Link>
       </td>
       <td className="text-left text-l border-y-8 border-white">
-        {product.company_name}
+        {product.supplier}
       </td>
       <td className="text-left text-l border-y-8 border-white">
         {product.category}

@@ -20,12 +20,14 @@ function ListProducts() {
 
   return (
     <div className="flex flex-col">
-      <p className="ml-12">
-        Connecté en tant que : <b>Eco Vrac</b>
+      <div className="ml-12">
+        <p>
+          Connecté en tant que : <b>Eco Vrac</b>
+        </p>
         <p>
           Produits de : <b>Nat-ali</b> et <b>Epice Scop</b>
         </p>
-      </p>
+      </div>
       <div className="flex flex-row justify-end">
         <PlusButton />
         <MinusButton />
