@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 import ProductsDetailsButtons from "@components/ProductsDetailsButtons";
 import ProductsDetailsProduct from "@components/ProductsDetailsProduct";
@@ -9,31 +9,38 @@ import ProductsDetailsSupplier from "@components/ProductsDetailsSupplier";
 import dataProducts from "../data/DataProducts";
 
 function ProductsDetails() {
-  const { id } = useParams();
-  const DT = dataProducts[parseInt(id - 1, 10)];
+  const [product] = useState(dataProducts);
 
   return (
     <main>
       <article className="flex justify-center pt-16">
         <h1 className="flex justify-center text-3xl font-bold font-barlow">
-          {DT.name}
+          {product[0].product_name}
         </h1>
       </article>
       <ProductsDetailsButtons />
       <section>
         <div>
           <ProductsDetailsProduct
-            ingredients={DT.ingredients}
-            origin={DT.origin}
-            advise={DT.advise}
-            label={DT.label}
+            detail={product[0].detail}
+            origin={product[0].origin}
+            advise={product[0].advise}
+            label={product[0].label}
           />
 
-          <ProductsDetailsSupplier />
+          <ProductsDetailsSupplier
+            company={product[0].company.company_name}
+            description={product[0].company.description}
+            phone={product[0].company.phone}
+            mail={product[0].company.mail}
+            address={product[0].company.address}
+            logo={product[0].company.file}
+            postcode={product[0].company.postcode}
+          />
 
           <ProductsDetailsRetailer
-            advise={DT.advise}
-            recipeIdea={DT.recipeIdea}
+            advise={product[0].advise}
+            recipeIdea={product[0].recipe_idea}
           />
         </div>
       </section>

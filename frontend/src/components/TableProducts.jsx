@@ -19,10 +19,12 @@ function TableProducts({ product }) {
         />
       </td>
       <td className="text-left text-l border-y-8 border-white">
-        <Link to={`/products/${product.id}`}>{product.product_name}</Link>
+        <Link to={`/products/${product.product_ID}`}>
+          {product.product_name}
+        </Link>
       </td>
       <td className="text-left text-l border-y-8 border-white">
-        {product.company_name}
+        {product.supplier}
       </td>
       <td className="text-left text-l border-y-8 border-white">
         {product.category}
