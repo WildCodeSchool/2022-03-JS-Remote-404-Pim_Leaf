@@ -11,7 +11,7 @@ function ProductsDetailsSupplier({
     <div className="flex flex-col mt-20 font-redHat w-3/4 m-auto">
       <h2 className="text-2xl">Le Fabricant</h2>
       {/* SUPPLIER */}
-      <article className="bg-middleBlue/50">
+      <article className="bg-middleBlue/50 shadow-lg mt-2">
         <div className="flex flex-row">
           <div className="flex items-center">
             <div className="col-span-1 row-span-2 p-10 flex justify-center">

@@ -6,7 +6,7 @@ function ProductsDetailsProduct({ detail, origin, advise, label }) {
         <div>
           <h2 className="text-2xl">Le produit</h2>
         </div>
-        <article className="bg-middleBlue/50 font-redHat flex justify-between p-10">
+        <article className="bg-middleBlue/50 font-redHat flex justify-between p-10 shadow-lg mt-2">
           <div className="flex flex-col">
             <div className="mt-4 mb-10">
               <h3 className="text-2xl">Ingrédients</h3>
