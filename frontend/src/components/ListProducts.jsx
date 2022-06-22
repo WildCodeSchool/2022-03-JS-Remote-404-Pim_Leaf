@@ -9,7 +9,7 @@ function ListProducts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/products`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}products`)
       .then((res) => {
         setProducts(res.data);
       })

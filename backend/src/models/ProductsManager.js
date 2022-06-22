@@ -18,7 +18,7 @@ class ProductsManager extends AbstractManager {
     LEFT JOIN company AS c
     ON s.supplier_id = c.id
     LEFT JOIN category AS cat
-    ON P.category_id = cat.id
+    ON p.category_id = cat.id
     `;
 
     const sqlValue = [];

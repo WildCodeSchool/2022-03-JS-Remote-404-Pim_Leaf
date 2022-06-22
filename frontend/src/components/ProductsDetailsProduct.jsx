@@ -1,4 +1,4 @@
-function ProductsDetailsProduct({ ingredients, origin, advise, label }) {
+function ProductsDetailsProduct({ detail, origin, advise, label }) {
   return (
     <>
       {/* PRODUCT */}
@@ -10,11 +10,7 @@ function ProductsDetailsProduct({ ingredients, origin, advise, label }) {
           <div className="flex flex-col">
             <div className="mt-4 mb-10">
               <h3 className="text-2xl">Ingrédients</h3>
-              <p>
-                {ingredients.map((p) => (
-                  <p> {p} </p>
-                ))}
-              </p>
+              <p>{detail}</p>
             </div>
 
             <div>
@@ -28,21 +24,12 @@ function ProductsDetailsProduct({ ingredients, origin, advise, label }) {
           <div className="flex flex-col">
             <div className="mt-4 mb-10">
               <h3 className="text-2xl">Origine</h3>
-              <p>{origin}</p>
+              <p>{origin.country}</p>
+              <p>{origin.region}</p>
             </div>
             <div className="col-span-1 order-4 grid grid-cols-2 pb-10">
               <h3 className="text-2xl col-span-2">Labels</h3>
-
-              {label.map((i) => (
-                <div>
-                  <img
-                    src={i.src}
-                    alt={i.alt}
-                    style={{ width: "70px", height: "70px" }}
-                    className="object-cover mx-2 my-2"
-                  />
-                </div>
-              ))}
+              <img src={label.file.url} alt={label.file.alt} />
             </div>
           </div>
         </article>
