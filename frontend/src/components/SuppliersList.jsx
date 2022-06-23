@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable import/no-unresolved */
+import CompanyLogo from "@assets/logo_leaf.png";
 
 export default function SuppliersList({ id, name, domaine, ville, status }) {
   return (
@@ -8,7 +9,7 @@ export default function SuppliersList({ id, name, domaine, ville, status }) {
           <div className="flex-shrink-0 w-10 h-10">
             <img
               className="w-full h-full rounded-full"
-              src="./src/assets/feuille.png"
+              src={CompanyLogo}
               alt="avatar"
             />
           </div>

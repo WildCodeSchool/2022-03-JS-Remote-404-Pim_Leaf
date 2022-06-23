@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import LoginForm from "@components/LoginForm";
 
-import Logo from "@assets/feuille.png";
+import Logo from "@assets/logo_leaf.png";
 
 export default function Login({ setIsNavbarHidden }) {
   useEffect(() => {

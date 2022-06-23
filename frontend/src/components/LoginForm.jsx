@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Avatar from "@assets/avatar_login.png";
+import Avatar from "@assets/icon_login_avatar.svg";
 import Padlock from "@assets/padlock_login.png";
 
 function LoginForm() {
