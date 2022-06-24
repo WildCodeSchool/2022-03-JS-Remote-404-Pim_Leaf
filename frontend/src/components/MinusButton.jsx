@@ -1,9 +1,9 @@
 import IconMinus from "../assets/icon_minus.svg";
 
-function MinusButton() {
+function MinusButton({ handleClickMinus, products }) {
   return (
     <div>
-      <button type="button" onClick={() => console.warn("edit button")}>
+      <button type="button" onClick={() => handleClickMinus(products)}>
         <img
           src={IconMinus}
           alt="icon-edit"

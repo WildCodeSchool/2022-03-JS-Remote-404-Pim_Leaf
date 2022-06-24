@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 import { useState, useEffect } from "react";
 import { MdDone } from "react-icons/md";
 import axios from "axios";
@@ -14,6 +15,16 @@ function ListProducts() {
     const index = newProduct.indexOf(prod);
     newProduct[index].check = !newProduct[index].check;
     setProducts(newProduct);
+  };
+
+  const handleClickMinus = (prod) => {
+    const productDelete = [];
+    for (let i = 0; i < prod.length; i++) {
+      if (prod[i].check === false) {
+        productDelete.push(prod[i]);
+      }
+    }
+    setProducts(productDelete);
   };
 
   useEffect(() => {
@@ -40,7 +51,7 @@ function ListProducts() {
       </div>
       <div className="flex flex-row justify-end">
         <PlusButton />
-        <MinusButton />
+        <MinusButton handleClickMinus={handleClickMinus} products={products} />
         <DownloadButton />
       </div>
       <div className="font-redHat w-4/5 m-auto">
