@@ -3,7 +3,7 @@ import SwitchButtonProducts from "./SwitchButtonProducts";
 
 function TableProducts({ product, MdDone, handleCheckProducts }) {
   return (
-    <tr className="odd:bg-lightBlue/10 even:bg-middleBlue/30">
+    <tr className="odd:bg-lightBlue/10 even:bg-middleBlue/30 transition duration-120 ease-out hover:scale-105">
       <td className="text-left border-y-8 border-white">
         <div
           className={
