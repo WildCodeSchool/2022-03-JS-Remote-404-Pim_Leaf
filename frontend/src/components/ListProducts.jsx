@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-plusplus */
 import { useState, useEffect } from "react";
 import { MdDone } from "react-icons/md";
@@ -18,13 +19,14 @@ function ListProducts() {
   };
 
   const handleClickMinus = (prod) => {
-    const productDelete = [];
+    const productToGet = [];
+    const productToDelete = [];
     for (let i = 0; i < prod.length; i++) {
-      if (prod[i].check === false) {
-        productDelete.push(prod[i]);
-      }
+      prod[i].check
+        ? productToDelete.push(prod[i])
+        : productToGet.push(prod[i]);
     }
-    setProducts(productDelete);
+    setProducts(productToGet);
   };
 
   useEffect(() => {
