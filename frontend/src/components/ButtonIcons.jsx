@@ -1,12 +1,10 @@
-import IconDownload from "../assets/icon_download.svg";
-
-function DownloadButton() {
+function ButtonIcons({ icon }) {
   return (
     <div>
       <button type="button" onClick={() => console.warn("edit button")}>
         <img
-          src={IconDownload}
-          alt="icon-edit"
+          src={`http://localhost:3000/src/assets/icon_${icon}.svg`}
+          alt={`${icon} icon for illustration`}
           className="w-16 transition duration-120 ease-out hover:scale-110 mr-16"
         />
       </button>
@@ -14,4 +12,4 @@ function DownloadButton() {
   );
 }
 
-export default DownloadButton;
+export default ButtonIcons;

@@ -1,9 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import SwitchButtonProducts from "./SwitchButtonProducts";
+import SwitchProducts from "./SwitchProducts";
 
 function TableProducts({ product }) {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(!checked);
   };
@@ -32,9 +32,9 @@ function TableProducts({ product }) {
       <td className="border-y-8 border-white">
         <td className="flex items-center ">
           {product.quantity > 0 ? (
-            <SwitchButtonProducts disponibility />
+            <SwitchProducts disponibility />
           ) : (
-            <SwitchButtonProducts disponibility={false} />
+            <SwitchProducts disponibility={false} />
           )}
         </td>
       </td>

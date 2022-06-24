@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import DownloadButton from "./DownloadButton";
-import MinusButton from "./MinusButton";
-import PlusButton from "./PlusButton";
+import ButtonIcons from "./ButtonIcons";
 import TableProducts from "./TableProducts";
 
 function ListProducts() {
   const [products, setProducts] = useState([]);
+  const icon = ["plus", "minus"];
+
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}products`)
@@ -29,9 +29,9 @@ function ListProducts() {
         </p>
       </div>
       <div className="flex flex-row justify-end">
-        <PlusButton />
-        <MinusButton />
-        <DownloadButton />
+        {icon.map((i) => (
+          <ButtonIcons icon={i} />
+        ))}
       </div>
       <div className="font-redHat w-4/5 m-auto">
         <table className="w-full">
@@ -58,7 +58,6 @@ function ListProducts() {
             </tr>
           </thead>
           <tbody className="">
-            {/* //   map the dataProducts for each product */}
             {products.map((product) => (
               <TableProducts key={product.id} product={product} />
             ))}

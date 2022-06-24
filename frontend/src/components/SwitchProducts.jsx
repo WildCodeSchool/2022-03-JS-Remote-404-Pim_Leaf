@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-function SwitchButtonProducts({ disponibility }) {
+function SwitchProducts({ disponibility }) {
   const [enabled] = useState(disponibility);
   const enabledClass = " transform translate-x-5";
 
@@ -25,4 +25,4 @@ function SwitchButtonProducts({ disponibility }) {
   );
 }
 
-export default SwitchButtonProducts;
+export default SwitchProducts;

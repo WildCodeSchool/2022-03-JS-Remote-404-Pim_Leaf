@@ -1,9 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import SwitchButtonProducts from "./SwitchButtonProducts";
+import SwitchProducts from "./SwitchProducts";
 
 function InventorySuppliers({ product }) {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(!checked);
   };
@@ -27,7 +27,7 @@ function InventorySuppliers({ product }) {
       <td className="border-y-8 border-white">
         <td className="flex items-center ">
           {product.disponibility}
-          <SwitchButtonProducts />
+          <SwitchProducts />
         </td>
       </td>
     </tr>
