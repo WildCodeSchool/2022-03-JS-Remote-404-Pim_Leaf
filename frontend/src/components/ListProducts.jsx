@@ -9,11 +9,19 @@ import TableProducts from "./TableProducts";
 function ListProducts() {
   const [products, setProducts] = useState([]);
 
+  const handleCheckProducts = (prod) => {
+    const newProduct = [...products];
+    const index = newProduct.indexOf(prod);
+    newProduct[index].check = !newProduct[index].check;
+    setProducts(newProduct);
+  };
+
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}products`)
       .then((res) => {
-        setProducts(res.data);
+        const prod = res.data.map((el) => ({ ...el, check: false }));
+        setProducts(prod);
       })
       .catch((error) => {
         console.warn(error.response.data);
@@ -66,6 +74,7 @@ function ListProducts() {
                 key={product.id}
                 product={product}
                 MdDone={MdDone}
+                handleCheckProducts={handleCheckProducts}
               />
             ))}
           </tbody>
