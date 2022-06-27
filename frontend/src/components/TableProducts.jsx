@@ -1,22 +1,19 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import SwitchProducts from "./SwitchProducts";
 
-function TableProducts({ product }) {
-  const [checked, setChecked] = useState(false);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
+function TableProducts({ product, MdDone, handleCheckProducts }) {
   return (
-    <tr className="odd:bg-lightBlue/10 even:bg-middleBlue/30">
+    <tr className="odd:bg-lightBlue/10 even:bg-middleBlue/30 transition duration-1000 ease-out hover:scale-105">
       <td className="text-left border-y-8 border-white">
-        <input
-          className="w-5 h-10 ml-5 accent-lightGreen"
-          type="checkbox"
-          checked={checked}
-          onChange={handleChange}
-        />
+        <div
+          className={
+            product.check
+              ? "p-1 pl-3 pr-3 text-lightGreen"
+              : "p-1 pl-3 pr-3 text-darkBlue"
+          }
+        >
+          <MdDone onClick={() => handleCheckProducts(product)} />
+        </div>
       </td>
       <td className="text-left text-l border-y-8 border-white">
         <Link to={`/products/${product.product_ID}`}>
@@ -29,14 +26,14 @@ function TableProducts({ product }) {
       <td className="text-left text-l border-y-8 border-white">
         {product.category}
       </td>
-      <td className="border-y-8 border-white">
-        <td className="flex items-center ">
+      <td className="text-left text-l border-y-8 border-white">
+        <div className="flex items-center ">
           {product.quantity > 0 ? (
             <SwitchProducts disponibility />
           ) : (
             <SwitchProducts disponibility={false} />
           )}
-        </td>
+        </div>
       </td>
     </tr>
   );

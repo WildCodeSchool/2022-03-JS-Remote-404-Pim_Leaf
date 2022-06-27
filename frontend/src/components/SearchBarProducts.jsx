@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-
-function SearchBarProducts() {
-  const [searchInput, setSearchInput] = useState("");
-
+function SearchBarProducts({ searchInput, setSearchInput }) {
   const handleChange = (e) => {
-    setSearchInput(e.target.value);
+    const input = e.target.value;
+    const inputUp = input.charAt(0).toUpperCase() + input.slice(1);
+    setSearchInput(inputUp);
   };
 
   return (
@@ -14,6 +12,7 @@ function SearchBarProducts() {
           className="bg-lightGrey h-10 w-1/3 pl-5 rounded-tl-full rounded-bl-full text-m focus:outline-none"
           type="search"
           name="search"
+          placeholder="Rechercher"
           onChange={handleChange}
           value={searchInput}
         />

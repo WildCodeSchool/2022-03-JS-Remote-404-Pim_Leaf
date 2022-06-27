@@ -42,8 +42,8 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(100) NULL,
-  `password` VARCHAR(50) NOT NULL,
-  `mail` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `mail` VARCHAR(255) NOT NULL UNIQUE, 
   `phone` VARCHAR(20) NULL
 ) ENGINE=InnoDB;
 
@@ -53,11 +53,11 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 INSERT INTO `user` (`name`, `password`, `mail`, `phone`) VALUES
-("JohnA", "Iamthebest", "JohnA@company.com", "+33111111111"),
-("JohnB", "Iamthebest", "JohnB@company.com", "+33222222222"),
-("JohnC", "Iamthebest", "JohnC@company.com", "+33333333333"),
-("JohnD", "Iamthebest", "JohnD@company.com", "+33444444444"),
-("JohnE", "Iamthebest", "JohnE@company.com", "+33555555555");
+("JohnA", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnA@company.com", "+33111111111"),
+("JohnB", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnB@company.com", "+33222222222"),
+("JohnC", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnC@company.com", "+33333333333"),
+("JohnD", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnD@company.com", "+33444444444"),
+("JohnE", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnE@company.com", "+33555555555");
 UNLOCK TABLES;
 
 -- ----------------------------------------------------------------------------

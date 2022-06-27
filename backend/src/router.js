@@ -1,9 +1,11 @@
 const express = require("express");
+const { checkData } = require("./middleware/auth");
 
 const {
   ItemController,
   ProductsController,
   CompanyController,
+  AuthController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -21,5 +23,7 @@ router.get("/company", CompanyController.browse);
 router.get("/company/:id", CompanyController.read);
 router.get("/company-supplier", CompanyController.browseSupplier);
 router.get("/company-trader", CompanyController.browseTrader);
+
+router.post("/login", checkData, AuthController.login);
 
 module.exports = router;
