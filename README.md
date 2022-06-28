@@ -2,7 +2,7 @@
 
 1. [x] Sprint 1 :heavy_check_mark:
 2. [x] Sprint 2 :heavy_check_mark:
-3. [ ] Sprint 3
+3. [x] Sprint 3 :heavy_check_mark:
 4. [ ] Sprint 4
 5. [ ] Sprint 5
 
@@ -10,29 +10,29 @@
 
 # RESOURCES LINKS :rocket:
 
--   Google Drive for Assets [LINK](https://drive.google.com/drive/folders/1hMR7FfGbupMqo02WwPGFPcJILT5Amzjn).
+- Google Drive for Assets [LINK](https://drive.google.com/drive/folders/1hMR7FfGbupMqo02WwPGFPcJILT5Amzjn).
 
 # 5DEV CONVENTION :chart_with_upwards_trend:
 
 ## :framed_picture: IMAGES
 
--   Labels images should be 96x96 pixels wide and have PNG extension
--   Icons should have SVG extension
--   Background should have WEBP extension
+- Labels images should be 96x96 pixels wide and have PNG extension
+- Icons should have SVG extension
+- Background should have WEBP extension
 
 ## FONTS
 
 MAIN PAGES
 
--   title : Barlow
--   texte : Red Hat Display
+- title : Barlow
+- texte : Red Hat Display
 
 ## COLORS
 
 ## :balloon: CSS
 
--   class => each term separated by an hyphen (eg "class-test")
--   id => each term separated by an underscore (eg "id_test")
+- class => each term separated by an hyphen (eg "class-test")
+- id => each term separated by an underscore (eg "id_test")
 
 ## :shipit: JS
 

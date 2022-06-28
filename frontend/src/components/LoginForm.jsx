@@ -20,8 +20,8 @@ function LoginForm() {
     <div>
       <form className="flex flex-col items-center">
         <label htmlFor="login">
-          <div className="flex flex-row items-center">
-            <div className="w-9 mb-8">
+          <div className="flex flex-row items-center justify-end">
+            <div className="w-5 mb-8 mr-2">
               <img src={Avatar} alt="avatar" />
             </div>
             <input
