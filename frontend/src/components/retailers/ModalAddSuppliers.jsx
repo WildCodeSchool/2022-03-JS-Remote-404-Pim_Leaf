@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/destructuring-assignment */
-import SuppliersListModal from "./SuppliersListModal";
+/* eslint-disable import/no-unresolved */
+
+import SuppliersListModal from "@retailersC/SuppliersListModal";
 
 function ModalAddSuppliers({ suppliers, searchInput }) {
   return (

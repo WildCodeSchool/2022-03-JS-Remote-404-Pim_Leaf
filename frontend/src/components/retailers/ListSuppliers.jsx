@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
+
 import React from "react";
-import TableSuppliers from "./TableSuppliers";
+import TableSuppliers from "@retailersC/TableSuppliers";
 
 function ListSuppliers({ products }) {
   return (

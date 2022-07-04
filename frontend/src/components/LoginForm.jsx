@@ -5,7 +5,7 @@ import axios from "axios";
 
 import Avatar from "@assets/icon_login_avatar.svg";
 import Padlock from "@assets/padlock_login.png";
-import UserExport from "../contexts/UserContext";
+import UserExport from "@contexts/UserContext";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -21,10 +21,14 @@ function LoginForm() {
       return;
     }
     axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/login`, { email, password })
+      .post(`${import.meta.env.VITE_BACKEND_URL}login`, { email, password })
       .then((res) => {
         setUser(res.data);
-        navigate("/products");
+        if (res.data.company_group_id === 1) {
+          navigate("/retailer/products");
+        } else if (res.data.company_group_id === 2) {
+          navigate("/supplier/products");
+        }
       })
       .catch((err) => console.error(err));
   };

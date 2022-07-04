@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable import/no-unresolved */
+
 import React from "react";
-import SuppliersList from "./SuppliersList";
+import SuppliersList from "@retailersC/SuppliersList";
 
 function SuppliersTable({ suppliers, searchInput }) {
   return (

@@ -1,14 +1,14 @@
 /* eslint-disable import/no-unresolved */
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import ProductsDetailsProduct from "@components/ProductsDetailsProduct";
-import ProductsDetailsRetailer from "@components/ProductsDetailsRetailer";
-import ProductsDetailsSupplier from "@components/ProductsDetailsSupplier";
+import ProductsDetailsProduct from "@retailersC/ProductsDetailsProduct";
+import ProductsDetailsRetailer from "@retailersC/ProductsDetailsRetailer";
+import ProductsDetailsSupplier from "@retailersC/ProductsDetailsSupplier";
 
 import ButtonIcons from "@components/ButtonIcons";
 import RetourButton from "@assets/retour_button.svg";
-import { Link } from "react-router-dom";
-import dataProducts from "../data/DataProducts";
+import dataProducts from "@data/DataProducts";
 
 function ProductsDetails() {
   const [product] = useState(dataProducts);

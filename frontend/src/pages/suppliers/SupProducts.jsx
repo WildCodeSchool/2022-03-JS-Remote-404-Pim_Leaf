@@ -1,5 +1,6 @@
-import ProductsTable from "../../components/suppliers/ProductsTable";
-import SearchBarProducts from "../../components/SearchBarProducts";
+/* eslint-disable import/no-unresolved */
+import ProductsTable from "@suppliersC/ProductsTable";
+import SearchBarProducts from "@components/SearchBarProducts";
 
 function SupProducts() {
   return (

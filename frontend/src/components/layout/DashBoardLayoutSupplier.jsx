@@ -1,11 +1,9 @@
 /* eslint-disable import/no-unresolved */
-
 import { Outlet } from "react-router-dom";
 
-import React from "react";
 import Nav from "@components/Nav";
 
-function DashboardLayout() {
+function DashboardLayoutSupplier() {
   return (
     <>
       <Nav />
@@ -13,4 +11,4 @@ function DashboardLayout() {
     </>
   );
 }
-export default DashboardLayout;
+export default DashboardLayoutSupplier;

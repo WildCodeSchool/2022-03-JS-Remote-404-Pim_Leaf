@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable import/no-unresolved */
+
 import React from "react";
-import ToBeConfirmedList from "./ToBeConfirmedList";
+import ToBeConfirmedList from "@retailersC/ToBeConfirmedList";
 
 function toBeConfirmed({ confirmed }) {
   return (

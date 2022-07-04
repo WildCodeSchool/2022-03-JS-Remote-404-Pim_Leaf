@@ -1,14 +1,15 @@
 /* eslint-disable react/button-has-type */
+/* eslint-disable import/no-unresolved */
 import { useState } from "react";
 import Popup from "reactjs-popup";
-import ModalAddSuppliers from "../components/ModalAddSuppliers";
-import SearchBarProducts from "../components/SearchBarProducts";
-import ToBeConfirmed from "../components/ToBeConfirmed";
-import SuppliersTable from "../components/SuppliersTable";
-import suppliersData from "../data/MarieData";
-import suppliersData2 from "../data/MarieData2";
-import plusButton from "../assets/icon_plus.svg";
-import RetourButtonWhite from "../assets/retour_button_white.svg";
+import ModalAddSuppliers from "@retailersC/ModalAddSuppliers";
+import SearchBarProducts from "@components/SearchBarProducts";
+import ToBeConfirmed from "@retailersC/ToBeConfirmed";
+import SuppliersTable from "@retailersC/SuppliersTable";
+import suppliersData from "@data/MarieData";
+import suppliersData2 from "@data/MarieData2";
+import plusButton from "@assets/icon_plus.svg";
+import RetourButtonWhite from "@assets/retour_button_white.svg";
 
 function Suppliers() {
   const [searchInput, setSearchInput] = useState("");

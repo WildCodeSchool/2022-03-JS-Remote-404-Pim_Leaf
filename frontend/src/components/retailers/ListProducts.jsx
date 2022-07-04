@@ -1,11 +1,12 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-unused-expressions */
 import { useState, useEffect } from "react";
 import { MdDone } from "react-icons/md";
 import axios from "axios";
-import ButtonIcons from "./ButtonIcons";
-import TableProducts from "./TableProducts";
-import SearchBarProducts from "./SearchBarProducts";
+import ButtonIcons from "@components/ButtonIcons";
+import TableProducts from "@retailersC/TableProducts";
+import SearchBarProducts from "@components/SearchBarProducts";
 
 function ListProducts() {
   const [products, setProducts] = useState([]);

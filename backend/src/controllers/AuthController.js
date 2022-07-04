@@ -8,7 +8,7 @@ class AuthController {
     try {
       const user = await models.user.findOneByEmail(req.body.email);
       if (!user[0]) {
-        return res.status(400).send("invalid credentials");
+        return res.status(400).send("Invalid credentials. Please try again.");
       }
       const checkPassword = await verifyPassword(
         req.body.password,

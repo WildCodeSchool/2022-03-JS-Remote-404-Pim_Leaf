@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import { Link } from "react-router-dom";
-import SwitchProducts from "./SwitchProducts";
+import SwitchProducts from "@components/SwitchProducts";
 
 function TableProducts({ product, MdDone, handleCheckProducts }) {
   return (

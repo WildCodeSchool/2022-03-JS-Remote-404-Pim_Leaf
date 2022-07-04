@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
+
 import React from "react";
-import InventorySuppliers from "./InventorySuppliers";
+import InventorySuppliers from "@retailersC/InventorySuppliers";
 
 function DetailsSuppliers({ products }) {
   return (

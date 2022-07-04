@@ -1,4 +1,5 @@
-import Fields from "../components/Fields";
+/* eslint-disable import/no-unresolved */
+import Fields from "@components/Fields";
 
 function Profil() {
   return (

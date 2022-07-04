@@ -2,13 +2,16 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import UserExport from "@contexts/UserContext";
 
 import Logo from "@assets/logo_text.png";
 import Logout from "@assets/icon_logout.svg";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
+  const { user } = useContext(UserExport.UserContext);
   return (
     <nav className="flex items-center justify-between">
       <Link to="/products" className="ml-10 w-40">
@@ -30,24 +33,46 @@ function Nav() {
         } `}
       >
         <li className="lg:inline-block  lg:ml-10 ml-5 lg:my-0 my-6 border-b-2 border-transparent hover:border-white duration-300">
-          <Link
-            to="/products"
-            className="text-#14252F cursor-pointer font-Barlow font-normal text-sm inline-block lg:py-5 py-3"
-            onClick={() => setNavOpen(!navOpen)}
-          >
-            <span className="font-bold mr-1.5">01</span>
-            MES PRODUITS
-          </Link>
+          {user.company_group_id === 1 ? (
+            <Link
+              to="/retailer/products"
+              className="text-#14252F cursor-pointer font-Barlow font-normal text-sm inline-block lg:py-5 py-3"
+              onClick={() => setNavOpen(!navOpen)}
+            >
+              <span className="font-bold mr-1.5">01</span>
+              MES PRODUITS
+            </Link>
+          ) : (
+            <Link
+              to="/supplier/products"
+              className="text-#14252F cursor-pointer font-Barlow font-normal text-sm inline-block lg:py-5 py-3"
+              onClick={() => setNavOpen(!navOpen)}
+            >
+              <span className="font-bold mr-1.5">01</span>
+              MES PRODUITS
+            </Link>
+          )}
         </li>
         <li className="lg:inline-block  lg:ml-10 ml-5 lg:my-0 my-6 border-b-2 border-transparent hover:border-white duration-300">
-          <Link
-            to="/suppliers"
-            className="text-#14252F cursor-pointer font-Barlow font-normal text-sm inline-block lg:py-5 py-3"
-            onClick={() => setNavOpen(!navOpen)}
-          >
-            <span className="font-bold mr-1.5">02</span>
-            MES FOURNISSEURS
-          </Link>
+          {user.company_group_id === 1 ? (
+            <Link
+              to="/retailer/suppliers"
+              className="text-#14252F cursor-pointer font-Barlow font-normal text-sm inline-block lg:py-5 py-3"
+              onClick={() => setNavOpen(!navOpen)}
+            >
+              <span className="font-bold mr-1.5">02</span>
+              MES FOURNISSEURS
+            </Link>
+          ) : (
+            <Link
+              to="/supplier/client"
+              className="text-#14252F cursor-pointer font-Barlow font-normal text-sm inline-block lg:py-5 py-3"
+              onClick={() => setNavOpen(!navOpen)}
+            >
+              <span className="font-bold mr-1.5">02</span>
+              MES CLIENT
+            </Link>
+          )}
         </li>
         <li className="lg:inline-block  lg:ml-10 ml-5 lg:my-0 my-6 border-b-2 border-transparent hover:border-white duration-300">
           <Link
