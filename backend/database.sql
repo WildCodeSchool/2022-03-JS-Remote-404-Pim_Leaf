@@ -57,7 +57,9 @@ INSERT INTO `user` (`name`, `password`, `mail`, `phone`) VALUES
 ("JohnB", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnB@company.com", "+33222222222"),
 ("JohnC", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnC@company.com", "+33333333333"),
 ("JohnD", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnD@company.com", "+33444444444"),
-("JohnE", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnE@company.com", "+33555555555");
+("JohnE", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "JohnE@company.com", "+33555555555"),
+("Faker", "$argon2id$v=19$m=65536,t=5,p=1$FkjcCc0+F15P0N5TLh3ndQ$FkttWmV6YpXwaqtjrKfALtaYkwyHv2ongXDP/C6bvY4", "Faker", "+33666666666");
+
 UNLOCK TABLES;
 
 -- ----------------------------------------------------------------------------
@@ -126,7 +128,8 @@ CREATE TABLE `company_group` (
 LOCK TABLES `company_group` WRITE;
 INSERT INTO `company_group` (`name`) VALUES
 ("Commerce"),
-("Fournisseur");
+("Fournisseur"),
+("Fabricant");
 UNLOCK TABLES;
 
 -- ----------------------------------------------------------------------------
@@ -163,7 +166,9 @@ INSERT INTO `company` (`company_name`, `address`, `postcode`, `city`, `mail`, `p
 ("Valfleuri", "5, rue de la Charente", 68270, "Wittenheim", "valfleuri@email.com", "+33-755-552-764", "desc test", NULL, 1, 5, 2),
 ("DAO", "1664, avenue Saint-Maurice", 4100, "Manosque", "dao@email.com", "+33-655-527-008", "desc test", NULL, 2, 4, 3),
 ("Nat-ali", "ZAC de la Brosse, 3 Rue Nicolas Appert", 44400, "Reze", "nat-alie@email.com", "+33-655-536-223", "desc test", NULL, 2, 4, 4),
-("Epice Scop", "7, Chemin des Tuileries", 13015, "Marseille", "epi-scope@email.com", "+33-765-550-901", "desc test", NULL, 2, 5, 5);
+("Le petit épicier","6 rue des timoniers",29470,"Plougastel-Daoulas","le-petit-epicier@email.com","+33-655-586-499", "desc test", NULL, 3, 2, 6),
+("Tagopia","48877 Buhler Circle",15963,"Longxing","qrisborough5@cisco.com","+86-726-641-0692", "desc test", NULL, 3, 3, 6),
+("Plambee","386 Haas Crossing",45963,"Xiaozhi","bdobbison8@cbsnews.com","+86-732-798-6831", "desc test", NULL, 3, 4, 6);
 UNLOCK TABLES;
 
 
@@ -187,11 +192,11 @@ CREATE TABLE `connection` (
 
 LOCK TABLES `connection` WRITE;
 INSERT INTO `connection` (`status`, `retailer_id`, `supplier_id`) VALUES
-("pending", 1, 3),
-("connected", 1, 4),
-("connected", 1, 5),
-("connected", 2, 3),
-("disabled", 2, 4);
+("En cours de connexion", 1, 3),
+("Connecté", 1, 4),
+("Connecté", 1, 5),
+("Connecté", 2, 3),
+("Annulé", 2, 4);
 UNLOCK TABLES;
 
 -- ----------------------------------------------------------------------------
