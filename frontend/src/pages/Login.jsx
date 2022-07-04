@@ -1,14 +1,9 @@
 /* eslint-disable import/no-unresolved */
-import { useEffect } from "react";
 import LoginForm from "@components/LoginForm";
 
 import Logo from "@assets/logo_leaf.png";
 
-export default function Login({ setIsNavbarHidden }) {
-  useEffect(() => {
-    setIsNavbarHidden(true);
-    return () => setIsNavbarHidden(false);
-  }, []);
+export default function Login() {
   return (
     <main className="bg-bgLogin h-screen bg-no-repeat bg-cover flex items-center justify-center">
       <div className="bg-loginGradient bg-center bg-fixed bg-no-repeat h-fit pt-5 pb-14 w-96 rounded-sm flex items-center justify-center">

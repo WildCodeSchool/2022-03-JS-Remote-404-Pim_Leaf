@@ -1,18 +1,9 @@
 /* eslint-disable import/no-unresolved */
-import CompanyLogo from "@assets/logo_leaf.png";
-
 export default function SuppliersList({ id, name, domaine, ville, status }) {
   return (
     <tr className="font-redHat">
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <div className="flex">
-          <div className="flex-shrink-0 w-10 h-10">
-            <img
-              className="w-full h-full rounded-full"
-              src={CompanyLogo}
-              alt="avatar"
-            />
-          </div>
           <div className="ml-3">
             <p className="text-darkBlue whitespace-no-wrap">{name}</p>
             <p className="text-darkBlue/50 whitespace-no-wrap">{id}</p>

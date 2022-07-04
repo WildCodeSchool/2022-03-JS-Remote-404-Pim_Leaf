@@ -1,20 +1,32 @@
 /* eslint-disable import/no-unresolved */
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import Avatar from "@assets/icon_login_avatar.svg";
 import Padlock from "@assets/padlock_login.png";
+import UserExport from "../contexts/UserContext";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  console.warn(email);
-  console.warn(password);
+  const [msg, setMsg] = useState("");
 
   const navigate = useNavigate();
+  const { setUser } = useContext(UserExport.UserContext);
 
   const handleClick = () => {
-    navigate("/products");
+    if (!email || !password) {
+      setMsg("Veuillez renseigner vos identifiants");
+      return;
+    }
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_URL}/login`, { email, password })
+      .then((res) => {
+        setUser(res.data);
+        navigate("/products");
+      })
+      .catch((err) => console.error(err));
   };
   return (
     <div>
@@ -54,11 +66,12 @@ function LoginForm() {
           </div>
         </label>
         <input
-          type="submit"
+          type="button"
           value="login"
           className="py-2 w-28 text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-12"
           onClick={handleClick}
         />
+        {msg && <p>{msg}</p>}
       </form>
     </div>
   );

@@ -2,7 +2,7 @@
 import React from "react";
 import SuppliersList from "./SuppliersList";
 
-function SuppliersTable({ suppliers }) {
+function SuppliersTable({ suppliers, searchInput }) {
   return (
     <div className="container mx-auto px-4 sm:px-8">
       <div className="py-8">
@@ -32,15 +32,21 @@ function SuppliersTable({ suppliers }) {
                 </tr>
               </thead>
               <tbody>
-                {suppliers.map(({ id, name, domaine, ville, status }) => (
-                  <SuppliersList
-                    id={id}
-                    name={name}
-                    domaine={domaine}
-                    ville={ville}
-                    status={status}
-                  />
-                ))}
+                {suppliers
+                  .filter(
+                    (supplier) =>
+                      supplier.name.includes(searchInput) ||
+                      supplier.domaine.includes(searchInput)
+                  )
+                  .map(({ id, name, domaine, ville, status }) => (
+                    <SuppliersList
+                      id={id}
+                      name={name}
+                      domaine={domaine}
+                      ville={ville}
+                      status={status}
+                    />
+                  ))}
               </tbody>
             </table>
           </div>
