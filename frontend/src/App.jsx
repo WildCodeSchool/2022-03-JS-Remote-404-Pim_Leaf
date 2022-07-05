@@ -3,19 +3,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 
 import ProtectedRoute from "@components/layout/ProtectRoute";
+import ProtectedRouteRetailer from "@components/layout/ProtectRouteRetailer";
+import ProtectedRouteSupplier from "@components/layout/ProtectRouteSupplier";
 import DashboardLayout from "@components/layout/DashBoardLayout";
+
 import Login from "@pages/Login";
 import Company from "@pages/Company";
 import CompanyDetails from "@pages/CompanyDetails";
 import Profil from "@pages/Profil";
 
-import DashboardLayoutRetailer from "@components/layout/DashBoardLayoutRetailer";
 import Products from "@retailersP/Products";
 import Suppliers from "@retailersP/Suppliers";
 import SuppliersDetails from "@retailersP/SuppliersDetails";
 import ProductsDetails from "@retailersP/ProductsDetails";
 
-import DashboardLayoutSupplier from "@components/layout/DashBoardLayoutSupplier";
 import SuppliersProducts from "@suppliersP/SupProducts";
 import SuppliersProductsDetails from "@suppliersP/SupProductsDetails";
 import SuppliersClients from "@suppliersP/SuppliersClients";
@@ -51,9 +52,9 @@ function App() {
           <Route
             path="/retailer"
             element={
-              <ProtectedRoute user={user}>
-                <DashboardLayoutRetailer />
-              </ProtectedRoute>
+              <ProtectedRouteRetailer user={user}>
+                <DashboardLayout />
+              </ProtectedRouteRetailer>
             }
           >
             <Route path="products" element={<Products />} />
@@ -66,9 +67,9 @@ function App() {
           <Route
             path="/supplier"
             element={
-              <ProtectedRoute user={user}>
-                <DashboardLayoutSupplier />
-              </ProtectedRoute>
+              <ProtectedRouteSupplier user={user}>
+                <DashboardLayout />
+              </ProtectedRouteSupplier>
             }
           >
             <Route path="products" element={<SuppliersProducts />} />

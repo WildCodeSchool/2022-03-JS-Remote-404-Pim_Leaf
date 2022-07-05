@@ -3,9 +3,13 @@ const { checkData } = require("./middleware/auth");
 
 const {
   ItemController,
+  AuthController,
   ProductsController,
   CompanyController,
-  AuthController,
+  RetailerController,
+  SupplierController,
+  ClientsController,
+  UserController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -18,11 +22,11 @@ router.delete("/items/:id", ItemController.delete);
 
 router.get("/products", ProductsController.browse);
 router.get("/products/:id", ProductsController.read);
-
-router.get("/company", CompanyController.browse);
 router.get("/company/:id", CompanyController.read);
-router.get("/company-supplier", CompanyController.browseSupplier);
-router.get("/company-trader", CompanyController.browseTrader);
+router.get("/retailer", RetailerController.browse);
+router.get("/supplier", SupplierController.browse);
+router.get("/clients", ClientsController.browse);
+router.get("/profil", UserController.browse);
 
 router.post("/login", checkData, AuthController.login);
 
