@@ -7,7 +7,7 @@ function SearchBarProducts({ searchInput, setSearchInput }) {
 
   return (
     <form action="search">
-      <div className=" flex flex-row justify-center">
+      <div className="mt-20 flex flex-row justify-center">
         <input
           className="bg-lightGrey h-10 w-1/3 pl-5 rounded-tl-full rounded-bl-full text-m focus:outline-none text-darkBlue"
           type="search"

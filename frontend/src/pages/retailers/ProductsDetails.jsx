@@ -6,7 +6,7 @@ import ProductsDetailsProduct from "@retailersC/ProductsDetailsProduct";
 import ProductsDetailsRetailer from "@retailersC/ProductsDetailsRetailer";
 import ProductsDetailsSupplier from "@retailersC/ProductsDetailsSupplier";
 
-import ButtonIcons from "@components/ButtonIcons";
+import ButtonIcons from "@components/common/ButtonIcons";
 import RetourButton from "@assets/retour_button.svg";
 import dataProducts from "@data/DataProducts";
 

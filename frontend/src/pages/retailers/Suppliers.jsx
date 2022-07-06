@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Popup from "reactjs-popup";
 import ModalAddSuppliers from "@retailersC/ModalAddSuppliers";
-import SearchBarProducts from "@components/SearchBarProducts";
+import SearchBarProducts from "@components/common/SearchBarProducts";
 import ToBeConfirmed from "@retailersC/ToBeConfirmed";
 import SuppliersTable from "@retailersC/SuppliersTable";
 import suppliersData from "@data/MarieData";

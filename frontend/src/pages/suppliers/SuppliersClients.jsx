@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import SearchBarProducts from "@components/SearchBarProducts";
+import SearchBarProducts from "@components/common/SearchBarProducts";
 import { useState } from "react";
 import ClientTable from "@components/suppliers/ClientTable";
 import suppliersData from "@data/MarieData";

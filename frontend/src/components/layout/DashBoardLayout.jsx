@@ -3,7 +3,7 @@
 import { Outlet } from "react-router-dom";
 
 import React from "react";
-import Nav from "@components/Nav";
+import Nav from "@components/common/Nav";
 
 function DashboardLayout() {
   return (

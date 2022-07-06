@@ -4,9 +4,9 @@
 import { useState, useEffect } from "react";
 import { MdDone } from "react-icons/md";
 import axios from "axios";
-import ButtonIcons from "@components/ButtonIcons";
-import TableProducts from "@retailersC/TableProducts";
-import SearchBarProducts from "@components/SearchBarProducts";
+import ButtonIcons from "@components/common/ButtonIcons";
+// import TableProducts from "@retailersC/TableProducts";
+import SearchBarProducts from "@components/common/SearchBarProducts";
 
 function ListProducts() {
   const [products, setProducts] = useState([]);
@@ -93,7 +93,7 @@ function ListProducts() {
             </tr>
           </thead>
           <tbody>
-            {products
+            {/* {products
               .filter(
                 (product) =>
                   product.product_name.includes(searchInput) ||
@@ -107,7 +107,7 @@ function ListProducts() {
                   MdDone={MdDone}
                   handleCheckProducts={handleCheckProducts}
                 />
-              ))}
+              ))} */}
           </tbody>
         </table>
       </div>
