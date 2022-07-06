@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import LoginForm from "@components/LoginForm";
+import LoginForm from "@components/common/LoginForm";
 
 import Logo from "@assets/logo_leaf.png";
 

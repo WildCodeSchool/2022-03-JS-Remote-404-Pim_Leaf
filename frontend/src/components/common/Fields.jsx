@@ -3,10 +3,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useForm } from "react-hook-form";
 
-import CompanyProfil from "../data/ClementData2";
-import userProfil from "../data/ClementData";
+import CompanyProfil from "../../data/ClementData2";
+import userProfil from "../../data/ClementData";
 
-function FieldsCompany() {
+function FieldsCompany({ company = {} }) {
   const { register, handleSubmit } = useForm();
   const { pathname } = window.location;
 
@@ -18,7 +18,7 @@ function FieldsCompany() {
       >
         {pathname === "/profil" ? (
           <p className="mt-5 mb-8 text-xl font-redHat">
-            Nom de mon entreprise : {userProfil[0].company}
+            Nom de mon entreprise : {company.user_id}
           </p>
         ) : (
           ""
