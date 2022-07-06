@@ -7,17 +7,16 @@ import ProtectedRouteRetailer from "@components/layout/ProtectRouteRetailer";
 import ProtectedRouteSupplier from "@components/layout/ProtectRouteSupplier";
 import DashboardLayout from "@components/layout/DashBoardLayout";
 
-import Login from "@pages/Login";
-import Company from "@pages/Company";
-import CompanyDetails from "@pages/CompanyDetails";
-import Profil from "@pages/Profil";
+import Login from "@pages/common/Login";
+import Company from "@pages/common/Company";
+import CompanyDetails from "@pages/common/CompanyDetails";
+import Profil from "@pages/common/Profil";
+import Products from "@pages/common/Products";
 
-import Products from "@retailersP/Products";
 import Suppliers from "@retailersP/Suppliers";
 import SuppliersDetails from "@retailersP/SuppliersDetails";
 import ProductsDetails from "@retailersP/ProductsDetails";
 
-import SuppliersProducts from "@suppliersP/SupProducts";
 import SuppliersProductsDetails from "@suppliersP/SupProductsDetails";
 import SuppliersClients from "@suppliersP/SuppliersClients";
 import SuppliersClientsDetails from "@suppliersP/SuppliersClientsDetails";
@@ -72,7 +71,7 @@ function App() {
               </ProtectedRouteSupplier>
             }
           >
-            <Route path="produits" element={<SuppliersProducts />} />
+            <Route path="produits" element={<Products />} />
             <Route
               path="produit/:id/details"
               element={<SuppliersProductsDetails />}
