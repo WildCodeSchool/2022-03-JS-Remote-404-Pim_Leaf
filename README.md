@@ -8,7 +8,7 @@
 
 ![Logo Pimleaf](https://www.pimleaf.fr/survey/tmp/assets/181c5803/Logo%20Pimleaf-1-.png)
 
-# HWOTO launch :star:
+# HOW TO launch :star:
 
 install on computer :
 
