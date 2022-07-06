@@ -13,12 +13,9 @@ class ProductsManager extends AbstractManager {
     s.quantity,
     cat.name category
     FROM ${ProductsManager.table} AS p
-    LEFT JOIN stock AS s
-    ON s.product_id = p.id
-    LEFT JOIN company AS c
-    ON s.supplier_id = c.id
-    LEFT JOIN category AS cat
-    ON p.category_id = cat.id
+    LEFT JOIN stock AS s ON s.product_id = p.id
+    LEFT JOIN company AS c ON s.supplier_id = c.id
+    LEFT JOIN category AS cat ON p.category_id = cat.id
     `;
 
     const sqlValue = [];
@@ -29,17 +26,46 @@ class ProductsManager extends AbstractManager {
     return this.connection.query(sqlQuery, sqlValue);
   }
 
-  insert(item) {
+  getProducts(id) {
     return this.connection.query(
-      `insert into ${ProductsManager.table} (title) values (?)`,
-      [item.title]
+      `SELECT
+      p.id,
+      p.product_name,
+      c.company_name AS owner,
+      comp.company_name AS supplier,
+      cat.name,
+      s.disponibility
+      FROM ${ProductsManager.table} AS p
+      LEFT JOIN stock AS s ON s.product_id = p.id
+      LEFT JOIN company AS c ON s.owner_id = c.id
+      LEFT JOIN company AS comp ON s.supplier_id = comp.id 
+      LEFT JOIN category AS cat ON cat.id = p.category_id
+      LEFT JOIN user AS u ON c.user_id = u.id
+      WHERE u.id=?
+      `,
+      [id]
     );
   }
 
-  update(item) {
+  getProductDetails(id) {
     return this.connection.query(
-      `update ${ProductsManager.table} set title = ? where id = ?`,
-      [item.title, item.id]
+      `SELECT
+    p.id AS product_id,
+    p.product_name,
+    p.detail AS product_details,
+    p.advise AS product_advise,
+    cat.name AS category,
+    a.name AS allergen,
+    o.country,
+    o.region,
+    l.name AS label_name
+    FROM ${ProductsManager.table} AS p
+    INNER JOIN category AS cat ON p.category_id = cat.id
+    INNER JOIN allergen_category AS a ON p.allergen_category_id = a.id 
+    INNER JOIN origin AS o ON p.origin_id = o.id
+    INNER JOIN label AS l ON p.label_id = l.id
+    WHERE p.id = ?`,
+      [id]
     );
   }
 }

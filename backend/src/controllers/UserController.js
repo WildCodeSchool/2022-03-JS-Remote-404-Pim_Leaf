@@ -1,9 +1,21 @@
 const models = require("../models");
 
 class UserController {
-  static browse = (req, res) => {
+  static readCompany = (req, res) => {
     models.user
-      .getProfil(req.body.email)
+      .getCompanyInfos(req.params.id)
+      .then(([rows]) => {
+        res.status(200).json(rows);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
+  static readUser = (req, res) => {
+    models.user
+      .getUserInfos(req.params.id)
       .then(([rows]) => {
         res.status(200).json(rows);
       })

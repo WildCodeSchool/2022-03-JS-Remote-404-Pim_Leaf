@@ -23,21 +23,27 @@ function PendingAcceptance({ confirmed }) {
                   <th className="font-redHat px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
                     Domaine
                   </th>
+                  <th className="font-redHat px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
+                    Ville
+                  </th>
                   <th className="font-redHat px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider" />
                   <th className="font-redHat px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider" />
                   <th className="font-redHat px-5 py-3 border-b-2 border-gray-200 bg-gray-100 border-middleBlue/100 bg-middleBlue/60" />
                 </tr>
               </thead>
               <tbody>
-                {confirmed.map(({ id, name, domaine, choix1, choix2 }) => (
-                  <PendingAcceptanceList
-                    id={id}
-                    name={name}
-                    domaine={domaine}
-                    choix1={choix1}
-                    choix2={choix2}
-                  />
-                ))}
+                {confirmed.map(
+                  ({ id, name, domaine, ville, choix1, choix2 }) => (
+                    <PendingAcceptanceList
+                      id={id}
+                      name={name}
+                      domaine={domaine}
+                      ville={ville}
+                      choix1={choix1}
+                      choix2={choix2}
+                    />
+                  )
+                )}
               </tbody>
             </table>
           </div>

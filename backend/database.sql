@@ -141,7 +141,7 @@ CREATE TABLE `company` (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `company_name` VARCHAR(100) NULL,
   `address` VARCHAR(255) NULL,
-  `postcode` TINYINT NULL,
+  `postcode` INT NULL,
   `city` VARCHAR(255) NULL,
   `mail` VARCHAR(255) NOT NULL,
   `phone` VARCHAR(20) NULL,
@@ -166,7 +166,7 @@ INSERT INTO `company` (`company_name`, `address`, `postcode`, `city`, `mail`, `p
 ("Valfleuri", "5, rue de la Charente", 68270, "Wittenheim", "valfleuri@email.com", "+33-755-552-764", "desc test", NULL, 1, 5, 2),
 ("DAO", "1664, avenue Saint-Maurice", 4100, "Manosque", "dao@email.com", "+33-655-527-008", "desc test", NULL, 2, 4, 3),
 ("Nat-ali", "ZAC de la Brosse, 3 Rue Nicolas Appert", 44400, "Reze", "nat-alie@email.com", "+33-655-536-223", "desc test", NULL, 2, 4, 4),
-("Le petit épicier","6 rue des timoniers",29470,"Plougastel-Daoulas","le-petit-epicier@email.com","+33-655-586-499", "desc test", NULL, 3, 2, 6),
+("Le petit épicier","6 rue des timoniers",29470,"Plougastel-Daoulas","le-petit-epicier@email.com","+33-655-586-499", "desc test", NULL, 3, 2, 5),
 ("Tagopia","48877 Buhler Circle",15963,"Longxing","qrisborough5@cisco.com","+86-726-641-0692", "desc test", NULL, 3, 3, 6),
 ("Plambee","386 Haas Crossing",45963,"Xiaozhi","bdobbison8@cbsnews.com","+86-732-798-6831", "desc test", NULL, 3, 4, 6);
 UNLOCK TABLES;
@@ -384,13 +384,13 @@ UNLOCK TABLES;
 CREATE TABLE `stock` (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `product_id` INT NOT NULL,
-  `company_id` INT NOT NULL,
+  `owner_id` INT NOT NULL,
   `supplier_id` INT NOT NULL,
-  `quantity` INT NOT NULL,
+  `disponibility` TINYINT NOT NULL,
   `price_ttc` INT NULL,
   `price_ht` INT NULL,
   FOREIGN KEY (product_id) REFERENCES products(id),
-  FOREIGN KEY (company_id) REFERENCES company(id),
+  FOREIGN KEY (owner_id) REFERENCES company(id),
   FOREIGN KEY (supplier_id) REFERENCES company(id)
 ) ENGINE=InnoDB;
 
@@ -399,27 +399,27 @@ CREATE TABLE `stock` (
 --
 
 LOCK TABLES `stock` WRITE;
-INSERT INTO `stock` (`product_id`, `company_id`,`supplier_id`, `quantity`, `price_ttc`, `price_ht`) VALUES
-(1, 2, 3, 50, 20, 19),
-(2, 1, 4, 0, 40, 38),
-(3, 2, 3, 64, 20, 19),
-(4, 1, 4, 87, 20, 19),
-(5, 1, 5, 0, 20, 19),
-(6, 2, 3, 50, 20, 19),
-(7, 1, 4, 0, 10, 9.5),
-(8, 1, 5, 60, 20, 19),
-(9, 1, 4, 44, 20, 19),
-(10, 1, 5, 0, 20, 19),
-(11, 1, 4, 61, 20, 19),
-(12, 1, 5, 45, 20, 19),
-(13, 2, 3, 30, 20, 19),
-(14, 1, 4, 0, 20, 19),
-(15, 1, 5, 34, 20, 19),
-(16, 2, 3, 36, 20, 19),
-(17, 1, 5, 77, 20, 19),
-(18, 1, 5, 0, 20, 19),
-(19, 2, 3, 100, 20, 19),
-(20, 1, 5, 123, 20, 19);
+INSERT INTO `stock` (`product_id`, `owner_id`,`supplier_id`, `disponibility`, `price_ttc`, `price_ht`) VALUES
+(1, 1, 3, 0, 20, 19),
+(2, 2, 4, 1, 40, 38),
+(3, 3, 3, 0, 20, 19),
+(4, 4, 4, 0, 20, 19),
+(5, 5, 5, 1, 20, 19),
+(6, 1, 3, 0, 20, 19),
+(7, 2, 4, 1, 10, 9.5),
+(8, 1, 5, 0, 20, 19),
+(9, 2, 4, 0, 20, 19),
+(10, 1, 5, 1, 20, 19),
+(11, 2, 4, 1, 20, 19),
+(12, 3, 5, 0, 20, 19),
+(13, 4, 3, 1, 20, 19),
+(14, 5, 4, 0, 20, 19),
+(15, 1, 5, 1, 20, 19),
+(16, 2, 3, 1, 20, 19),
+(17, 1, 5, 0, 20, 19),
+(18, 2, 5, 1, 20, 19),
+(19, 2, 3, 0, 20, 19),
+(20, 1, 5, 0, 20, 19);
 UNLOCK TABLES;
 
 -- ----------------------------------------------------------------------------

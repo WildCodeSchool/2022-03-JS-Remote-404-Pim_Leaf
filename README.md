@@ -3,10 +3,27 @@
 1. [x] Sprint 1 :heavy_check_mark:
 2. [x] Sprint 2 :heavy_check_mark:
 3. [x] Sprint 3 :heavy_check_mark:
-4. [ ] Sprint 4
+4. [x] Sprint 4 :heavy_check_mark:
 5. [ ] Sprint 5
 
 ![Logo Pimleaf](https://www.pimleaf.fr/survey/tmp/assets/181c5803/Logo%20Pimleaf-1-.png)
+
+# HWOTO launch :star:
+
+install on computer :
+
+- vscode + git + node + mysql
+
+clone the project :
+
+- git clone this repo on a local folder.
+- head to the main folder in a shell then launch "npm i" to install node dependencies.
+- repeat the "npm i" command in the "/frontend" and "/backend" subfolders.
+- in the "/backend" folder, launch the "npm run migrate" command to populate DB.
+
+deploy :
+
+- back to the main folder, run "npm run dev" to see the site deployed on http://localhost:3000.
 
 # RESOURCES LINKS :rocket:
 

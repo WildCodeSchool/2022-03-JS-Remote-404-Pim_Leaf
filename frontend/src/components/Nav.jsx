@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 
 import UserExport from "@contexts/UserContext";
@@ -11,7 +11,14 @@ import Logout from "@assets/icon_logout.svg";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
-  const { user } = useContext(UserExport.UserContext);
+  const { user, setUser } = useContext(UserExport.UserContext);
+
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    setUser();
+    navigate("/login");
+  };
+
   return (
     <nav className="flex items-center justify-between">
       <Link to="/products" className="ml-10 w-40">
@@ -94,12 +101,26 @@ function Nav() {
             MON PROFIL
           </Link>
         </li>
-        <button
-          type="button"
-          className="lg:inline-block  lg:ml-10 ml-5 lg:my-0 my-6 hover:border-white duration-300"
-        >
-          <img src={Logout} alt="" className="h-12 mr-14 inline-block py-3" />
-        </button>
+        <li className="lg:inline-block  lg:ml-10 ml-5 lg:my-0 my-6">
+          <Link
+            to="/"
+            className="text-#14252F cursor-pointer font-Barlow font-normal text-sm inline-block lg:py-5 py-3"
+            onClick={handleLogout}
+          >
+            <div className="">
+              <button
+                type="button"
+                className="lg:inline-block  lg:ml-10 ml-5 lg:my-0 my-6 hover:border-white duration-300"
+              >
+                <img
+                  src={Logout}
+                  alt=""
+                  className="h-12 mr-14 inline-block py-3"
+                />
+              </button>
+            </div>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

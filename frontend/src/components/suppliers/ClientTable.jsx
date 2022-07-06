@@ -15,7 +15,7 @@ function ClientTable({ suppliers, searchInput }) {
               <thead>
                 <tr>
                   <th className="font-redHat px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
-                    Clients / Nom
+                    Client / Nom
                   </th>
                   <th className="font-redHat px-5 py-3 border-b-2 border-middleBlue/100 bg-middleBlue/60 text-left text-xs font-semibold text-darkBlue uppercase tracking-wider">
                     Domaine

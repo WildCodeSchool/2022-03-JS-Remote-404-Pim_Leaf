@@ -1,6 +1,6 @@
 import React from "react";
 
-function PendingAcceptanceList({ id, name, domaine, choix1, choix2 }) {
+function PendingAcceptanceList({ id, name, domaine, ville, choix1, choix2 }) {
   return (
     <tr className="font-redHat">
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -13,6 +13,9 @@ function PendingAcceptanceList({ id, name, domaine, choix1, choix2 }) {
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         {domaine}
+      </td>
+      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+        {ville}
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <button
