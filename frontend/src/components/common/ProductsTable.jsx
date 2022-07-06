@@ -99,7 +99,7 @@ function ProductsTable() {
                   (product) =>
                     product.product_name.includes(searchInput) ||
                     product.supplier.includes(searchInput) ||
-                    product.category.includes(searchInput)
+                    product.name.includes(searchInput)
                 )
                 .map((product) => (
                   <ProductsLines

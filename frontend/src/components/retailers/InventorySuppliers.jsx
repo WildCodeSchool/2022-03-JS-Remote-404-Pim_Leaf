@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SwitchProducts from "@components/SwitchProducts";
+import SwitchProducts from "@components/common/SwitchProducts";
 
 function InventorySuppliers({ product }) {
   const [checked, setChecked] = useState(false);

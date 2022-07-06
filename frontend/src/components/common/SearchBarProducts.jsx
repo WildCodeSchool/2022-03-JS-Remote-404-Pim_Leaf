@@ -1,3 +1,6 @@
+/* eslint-disable import/no-unresolved */
+import SearchIcon from "@assets/search_icon.svg";
+
 function SearchBarProducts({ searchInput, setSearchInput }) {
   const handleChange = (e) => {
     const input = e.target.value;
@@ -20,11 +23,7 @@ function SearchBarProducts({ searchInput, setSearchInput }) {
           type="submit"
           className="bg-lightGrey flex justify-center w-10 rounded-tr-full rounded-br-full"
         >
-          <img
-            src="../src/assets/search_icon.svg"
-            alt="icon recherche"
-            className="h-10 w-4"
-          />
+          <img src={SearchIcon} alt="icon recherche" className="h-10 w-4" />
         </button>
       </div>
     </form>
