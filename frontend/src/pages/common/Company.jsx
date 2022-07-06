@@ -15,17 +15,13 @@ function Company() {
   useEffect(() => {
     axios
       .get(
-        // `${import.meta.env.VITE_BACKEND_URL}company/${user.company_group_id}`
-        `http://localhost:5000/company/2`
+        `${import.meta.env.VITE_BACKEND_URL}company/${user.company_group_id}`
       )
       .then((res) => {
-        // console.log(res.data);
         setDatas(res.data);
       });
   }, []);
 
-  // console.log(`user vaut ${user}`);
-  // console.log(data);
   return (
     <main>
       <h1 className="flex justify-center text-3xl font-bold font-barlow text-darkBlue mb-14 mt-14">
