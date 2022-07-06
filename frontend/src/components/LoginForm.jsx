@@ -25,9 +25,9 @@ function LoginForm() {
       .then((res) => {
         setUser(res.data);
         if (res.data.company_group_id === 1) {
-          navigate("/retailer/products");
+          navigate("/commercant/produits");
         } else if (res.data.company_group_id === 2) {
-          navigate("/supplier/products");
+          navigate("/fournisseur/produits");
         }
       })
       .catch((err) => console.error(err));

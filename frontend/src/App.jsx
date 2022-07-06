@@ -43,38 +43,41 @@ function App() {
               </ProtectedRoute>
             }
           >
-            <Route path="company" element={<Company />} />
-            <Route path="company/:id" element={<CompanyDetails />} />
+            <Route path="entreprise" element={<Company />} />
+            <Route path="entreprise/:id" element={<CompanyDetails />} />
             <Route path="profil" element={<Profil />} />
           </Route>
 
           {/* RETAILERS */}
           <Route
-            path="/retailer"
+            path="/commercant"
             element={
               <ProtectedRouteRetailer user={user}>
                 <DashboardLayout />
               </ProtectedRouteRetailer>
             }
           >
-            <Route path="products" element={<Products />} />
-            <Route path="products/:id" element={<ProductsDetails />} />
-            <Route path="suppliers" element={<Suppliers />} />
-            <Route path="suppliers/:id" element={<SuppliersDetails />} />
+            <Route path="produits" element={<Products />} />
+            <Route path="produit/:id/details" element={<ProductsDetails />} />
+            <Route path="fournisseurs" element={<Suppliers />} />
+            <Route path="fournisseur/:id" element={<SuppliersDetails />} />
           </Route>
 
           {/* SUPPLIERS */}
           <Route
-            path="/supplier"
+            path="/fournisseur"
             element={
               <ProtectedRouteSupplier user={user}>
                 <DashboardLayout />
               </ProtectedRouteSupplier>
             }
           >
-            <Route path="products" element={<SuppliersProducts />} />
-            <Route path="products/:id" element={<SuppliersProductsDetails />} />
-            <Route path="client" element={<SuppliersClients />} />
+            <Route path="produits" element={<SuppliersProducts />} />
+            <Route
+              path="produit/:id/details"
+              element={<SuppliersProductsDetails />}
+            />
+            <Route path="clients" element={<SuppliersClients />} />
             <Route path="client/:id" element={<SuppliersClientsDetails />} />
           </Route>
         </Routes>

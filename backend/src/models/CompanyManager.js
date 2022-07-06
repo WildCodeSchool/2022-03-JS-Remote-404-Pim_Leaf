@@ -8,31 +8,45 @@ class CompanyManager extends AbstractManager {
     return this.connection.query(sqlQuery);
   }
 
-  findAllSupplier() {
-    const sqlQuery = `SELECT * FROM ${CompanyManager.table} 
-    INNER JOIN company_group AS g ON ${CompanyManager.table}.group_id=g.id 
-    WHERE g.id=2`;
-    return this.connection.query(sqlQuery);
-  }
-
-  findAllTrader() {
-    const sqlQuery = `SELECT * FROM ${CompanyManager.table} 
-    INNER JOIN company_group AS g ON ${CompanyManager.table}.group_id=g.id 
-    WHERE g.id=1`;
-    return this.connection.query(sqlQuery);
-  }
-
-  insert(item) {
+  findUserCompany(id) {
     return this.connection.query(
-      `insert into ${CompanyManager.table} (title) values (?)`,
-      [item.title]
+      `SELECT id FROM ${CompanyManager.table}
+      WHERE user_id = ?
+        `,
+      [id]
     );
   }
 
-  update(item) {
+  findAllSupplier(id) {
     return this.connection.query(
-      `update ${CompanyManager.table} set title = ? where id = ?`,
-      [item.title, item.id]
+      `SELECT 
+      c.id,
+      c.company_name,
+      a.name AS domain,
+      c.city,
+      con.status,
+      con.retailer_id,
+      con.supplier_id
+      FROM ${CompanyManager.table} AS c
+      LEFT JOIN connection AS con ON c.id=con.supplier_id
+      LEFT JOIN activity_field AS a ON c.activity_field_id=a.id
+      WHERE con.retailer_id = ? OR (con.supplier_id IS NULL OR con.status IS NULL)
+      `,
+      [id]
+    );
+  }
+
+  findAllRetailer() {
+    return this.connection.query(
+      `SELECT 
+      c.company_name,
+      a.name,
+      c.city,
+      con.status 
+      FROM ${CompanyManager.table} AS c
+    LEFT JOIN activity_field AS a ON c.activity_field_id=a.id
+    LEFT JOIN connection AS con ON c.id=con.supplier_id
+    WHERE c.company_group_id=1`
     );
   }
 }

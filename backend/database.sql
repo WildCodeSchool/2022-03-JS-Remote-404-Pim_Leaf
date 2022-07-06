@@ -164,9 +164,9 @@ LOCK TABLES `company` WRITE;
 INSERT INTO `company` (`company_name`, `address`, `postcode`, `city`, `mail`, `phone`, `description`, `file_id`, `company_group_id`, `activity_field_id`, `user_id`) VALUES
 ("Eco Vrac", "13, avenue du Maréchal Foch", 68100, "Mulhouse", "ecovrac@email.com", "+33-655-535-768", "desc test", NULL, 1, 1, 1),
 ("Valfleuri", "5, rue de la Charente", 68270, "Wittenheim", "valfleuri@email.com", "+33-755-552-764", "desc test", NULL, 1, 5, 2),
-("DAO", "1664, avenue Saint-Maurice", 4100, "Manosque", "dao@email.com", "+33-655-527-008", "desc test", NULL, 2, 4, 3),
+("DAO", "1664, avenue Saint-Maurice", 4100, "Manosque", "dao@email.com", "+33-655-527-008", "desc test", NULL, 1, 4, 3),
 ("Nat-ali", "ZAC de la Brosse, 3 Rue Nicolas Appert", 44400, "Reze", "nat-alie@email.com", "+33-655-536-223", "desc test", NULL, 2, 4, 4),
-("Le petit épicier","6 rue des timoniers",29470,"Plougastel-Daoulas","le-petit-epicier@email.com","+33-655-586-499", "desc test", NULL, 3, 2, 5),
+("Le petit épicier","6 rue des timoniers",29470,"Plougastel-Daoulas","le-petit-epicier@email.com","+33-655-586-499", "desc test", NULL, 2, 2, 5),
 ("Tagopia","48877 Buhler Circle",15963,"Longxing","qrisborough5@cisco.com","+86-726-641-0692", "desc test", NULL, 3, 3, 6),
 ("Plambee","386 Haas Crossing",45963,"Xiaozhi","bdobbison8@cbsnews.com","+86-732-798-6831", "desc test", NULL, 3, 4, 6);
 UNLOCK TABLES;
@@ -192,11 +192,11 @@ CREATE TABLE `connection` (
 
 LOCK TABLES `connection` WRITE;
 INSERT INTO `connection` (`status`, `retailer_id`, `supplier_id`) VALUES
-("En cours de connexion", 1, 3),
+("En cours de connexion", 2, 4),
 ("Connecté", 1, 4),
 ("Connecté", 1, 5),
-("Connecté", 2, 3),
-("Annulé", 2, 4);
+("Connecté", 3, 5),
+("Annulé", 2, 5);
 UNLOCK TABLES;
 
 -- ----------------------------------------------------------------------------
