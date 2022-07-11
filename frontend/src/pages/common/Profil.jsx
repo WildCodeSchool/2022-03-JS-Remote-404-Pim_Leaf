@@ -87,7 +87,7 @@ function Profil() {
         type="button"
         className="py-6 w-1/4 text-white text-base bg-darkBlue hover:bg-opacity-80 rounded-full  m-auto my-12"
       >
-        Update Datas
+        Enregistrer
       </button>
     </main>
   );

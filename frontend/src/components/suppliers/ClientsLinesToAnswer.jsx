@@ -13,39 +13,47 @@ function ClientsLinesToAnswer({ human, action }) {
         </Link>
       </td>
 
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        {human.domain}
-      </td>
+      <td className="px-5 py-5 border-b bg-white text-sm">{human.domain}</td>
 
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        {human.city}
-      </td>
+      <td className="px-5 py-5 border-b bg-white text-sm">{human.city}</td>
 
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      <td className="px-5 py-5 border-b bg-white text-sm flex">
         <button
           type="button"
-          className="w-1/3 float-left bg-buttonOrange p-1 mx-2 rounded-full"
           onClick={action}
+          className="w-full relative transition duration-300 ease-in-out focus:outline-none focus:shadow-outline hover:bg-lightBlue hover:text-white font-normal py-2 px-4 rounded-full"
         >
+          <span
+            aria-hidden
+            className="absolute inset-0 bg-lightBlue/90 opacity-50 rounded-full"
+          />
+          <span className="relative" />
           Accepter
         </button>
 
         <button
           type="button"
-          className="w-1/3 float-left bg-buttonRed p-1 mx-2 rounded-full"
           onClick={action}
+          className="w-full relative transition duration-300 ease-in-out focus:outline-none focus:shadow-outline hover:bg-lightBlue hover:text-white font-normal py-2 px-4 rounded-full"
         >
+          <span
+            aria-hidden
+            className="absolute inset-0 bg-lightBlue/90 opacity-50 rounded-full"
+          />
+          <span className="relative" />
           Refuser
         </button>
       </td>
 
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        <button
-          type="button"
-          className="inline-block text-darkBlue text-xl transition duration-120 ease-out hover:scale-125"
-        >
-          <FiArrowRight />
-        </button>
+        <Link to={`/fournisseur/client/${human.retailer_id}/details`}>
+          <button
+            type="button"
+            className="inline-block text-darkBlue text-xl transition duration-120 ease-out hover:scale-125"
+          >
+            <FiArrowRight />
+          </button>
+        </Link>
       </td>
     </tr>
   );

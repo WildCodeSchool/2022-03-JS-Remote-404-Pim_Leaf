@@ -72,7 +72,7 @@ function LoginForm() {
         </label>
         <input
           type="button"
-          value="login"
+          value="Se connecter"
           className="py-2 w-28 text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-12"
           onClick={handleClick}
         />

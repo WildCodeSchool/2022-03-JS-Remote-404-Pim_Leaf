@@ -41,12 +41,14 @@ function SuppliersLines({ human }) {
         </span>
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        <button
-          type="button"
-          className="inline-block text-darkBlue text-xl transition duration-120 ease-out hover:scale-125"
-        >
-          <FiArrowRight />
-        </button>
+        <Link to={`/commercant/fournisseur/${human.supplier_id}/details`}>
+          <button
+            type="button"
+            className="inline-block text-darkBlue text-xl transition duration-120 ease-out hover:scale-125"
+          >
+            <FiArrowRight />
+          </button>
+        </Link>
       </td>
     </tr>
   );
